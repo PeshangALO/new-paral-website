@@ -2,19 +2,22 @@ import BlogData from "@/components/Blog/blogData";
 import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
+import { Metadata } from "next";
 
-// ✅ Ensure this function returns a Promise
+// ✅ Define `generateStaticParams()` to statically generate pages
 export async function generateStaticParams(): Promise<{ id: string }[]> {
   return BlogData.map((post) => ({
-    id: post._id.toString(),
+    id: post._id.toString(), // Ensure ID is a string
   }));
 }
 
-interface BlogDetailsPageProps {
+// ✅ Fix: Correctly define `params` using Next.js `PageProps`
+interface PageProps {
   params: { id: string };
 }
 
-const BlogDetailsPage = ({ params }: BlogDetailsPageProps) => {
+// ✅ Fix: Ensure the function correctly expects `params`
+const BlogDetailsPage = ({ params }: PageProps) => {
   // Find the blog post by ID
   const blog = BlogData.find((post) => post._id === Number(params.id));
 
