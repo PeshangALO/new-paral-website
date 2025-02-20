@@ -3,14 +3,18 @@ import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
 
-// ✅ Generate static paths for each blog post
-export async function generateStaticParams() {
+// ✅ Ensure this function returns a Promise
+export async function generateStaticParams(): Promise<{ id: string }[]> {
   return BlogData.map((post) => ({
     id: post._id.toString(),
   }));
 }
 
-const BlogDetailsPage = ({ params }: { params: { id: string } }) => {
+interface BlogDetailsPageProps {
+  params: { id: string };
+}
+
+const BlogDetailsPage = ({ params }: BlogDetailsPageProps) => {
   // Find the blog post by ID
   const blog = BlogData.find((post) => post._id === Number(params.id));
 
