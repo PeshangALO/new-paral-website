@@ -3,14 +3,16 @@ import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
 
-// Return a Promise in generateStaticParams
+/**
+ * Generates the list of available route params at build time.
+ * This must return an array of objects (no "Promise<...>" in the type).
+ */
 export async function generateStaticParams(): Promise<{ id: string }[]> {
   return BlogData.map((post) => ({
     id: post._id.toString(),
   }));
 }
 
-// Update the prop type for the component
 export default function BlogDetailsPage({
   params,
 }: {
@@ -41,7 +43,7 @@ export default function BlogDetailsPage({
                 height={400}
                 className="rounded-md"
               />
-              <h2 className="text-3xl font-semibold text-black dark:text-white mt-6">
+              <h2 className="mt-6 text-3xl font-semibold text-black dark:text-white">
                 {blog.title}
               </h2>
               <p className="mt-4 text-gray-600">{blog.metadata}</p>
