@@ -13,7 +13,7 @@ const ErroPage = () => {
     <section className="overflow-hidden pb-25 pt-45 lg:pb-32.5 lg:pt-50 xl:pb-37.5 xl:pt-55">
       <div className="animate_top mx-auto max-w-[518px] text-center">
         <Image
-          src="/images/shape/404.svg"
+          src="../images/shape/404.svg"
           alt="404"
           className="mx-auto mb-7.5"
           width={400}

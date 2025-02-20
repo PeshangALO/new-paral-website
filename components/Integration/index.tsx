@@ -26,14 +26,14 @@ const Integration = () => {
               width={1200}
               height={400}
               sizes="(max-width: 768px) 100vw"
-              src="/images/shape/shape-dotted-light.svg"
+              src="./images/shape/shape-dotted-light.svg"
               alt="Dotted"
               className="dark:hidden"
               style={{ position: "static" }}
             />
             <Image
               fill
-              src="/images/shape/shape-dotted-dark.svg"
+              src="./images/shape/shape-dotted-dark.svg"
               alt="Dotted"
               className="hidden dark:block"
             />
@@ -61,7 +61,7 @@ const Integration = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-07.svg"
+                  src="../images/brand/brand-07.svg"
                   alt="Brand"
                 />
               </div>
@@ -108,7 +108,7 @@ const Integration = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-08.svg"
+                  src="../images/brand/brand-08.svg"
                   alt="Brand"
                 />
               </div>
@@ -157,7 +157,7 @@ const Integration = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-09.svg"
+                  src="../images/brand/brand-09.svg"
                   alt="Brand"
                 />
               </div>
@@ -225,7 +225,7 @@ const Integration = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-10.svg"
+                  src="../images/brand/brand-10.svg"
                   alt="Brand"
                 />
               </div>
@@ -274,7 +274,7 @@ const Integration = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-11.svg"
+                  src="../images/brand/brand-11.svg"
                   alt="Brand"
                 />
               </div>
@@ -323,7 +323,7 @@ const Integration = () => {
                 <Image
                   width={50}
                   height={50}
-                  src="./images/brand/brand-12.svg"
+                  src="../images/brand/brand-12.svg"
                   alt="Brand"
                 />
               </div>

@@ -12,27 +12,27 @@ const FunFact = () => {
           <Image
             width={335}
             height={384}
-            src="/images/shape/shape-04.png"
+            src="./images/shape/shape-04.png"
             alt="Man"
             className="absolute -left-15 -top-25 -z-1 lg:left-0"
           />
           <Image
             width={132}
             height={132}
-            src="/images/shape/shape-05.png"
+            src="./images/shape/shape-05.png"
             alt="Doodle"
             className="absolute bottom-0 right-0 -z-1"
           />
 
           <Image
             fill
-            src="/images/shape/shape-dotted-light-02.svg"
+            src="./images/shape/shape-dotted-light-02.svg"
             alt="Dotted"
             className="absolute left-0 top-0 -z-1 dark:hidden"
           />
           <Image
             fill
-            src="/images/shape/shape-dotted-dark-02.svg"
+            src="./images/shape/shape-dotted-dark-02.svg"
             alt="Dotted"
             className="absolute left-0 top-0 -z-1 hidden dark:block"
           />
