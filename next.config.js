@@ -8,15 +8,17 @@ const nextConfig = {
     unoptimized: true,
     loader: 'custom',
     loaderFile: './loader.js',
-    domains: ['localhost'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn.sanity.io',
+        hostname: '*',
         port: '',
+        pathname: '**',
       },
     ],
   },
+  // Add this to help with static export
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
