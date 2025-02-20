@@ -4,27 +4,26 @@ import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
 import { Metadata } from "next";
 
-// Define the params interface
-interface PageParams {
+// Define the params type
+type PageParams = {
   id: string;
 }
 
-// Define proper page props type
-interface PageProps {
-  params: PageParams;
-  searchParams: Record<string, string | string[] | undefined>;
-}
-
 // Generate static params
-export async function generateStaticParams(): Promise<PageParams[]> {
+export async function generateStaticParams() {
   return BlogData.map((post) => ({
     id: post._id.toString(),
   }));
 }
 
-// Add metadata generation
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const blog = BlogData.find((post) => post._id.toString() === params.id);
+// Generate metadata
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<PageParams> 
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const blog = BlogData.find((post) => post._id.toString() === resolvedParams.id);
   
   return {
     title: blog?.title || 'Blog Post',
@@ -33,8 +32,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 // Page component
-async function BlogDetailsPage({ params, searchParams }: PageProps) {
-  const blog = BlogData.find((post) => post._id.toString() === params.id);
+export default async function Page({ 
+  params 
+}: { 
+  params: Promise<PageParams> 
+}) {
+  const resolvedParams = await params;
+  const blog = BlogData.find((post) => post._id.toString() === resolvedParams.id);
 
   if (!blog) {
     return <p className="text-center text-xl">Blog post not found</p>;
@@ -70,5 +74,3 @@ async function BlogDetailsPage({ params, searchParams }: PageProps) {
     </section>
   );
 }
-
-export default BlogDetailsPage;
