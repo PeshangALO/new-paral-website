@@ -2,6 +2,7 @@ import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
 import { Metadata } from "next";
 import Image from "next/image";
+import { getAssetPath } from "@/utils/assets";
 
 export const metadata: Metadata = {
   title: "Blog Details Page - Solid SaaS Boilerplate",
@@ -80,7 +81,7 @@ const SingleBlogPage = async () => {
                 <div className="mb-10 w-full overflow-hidden ">
                   <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <Image
-                      src={"./images/blog/blog-01.png"}
+                      src={getAssetPath("/images/blog/blog-01.png")}
                       alt="Kobe Steel plant that supplied"
                       fill
                       className="rounded-md object-cover object-center"
@@ -133,13 +134,13 @@ const SingleBlogPage = async () => {
 
                   <div className="flex flex-wrap gap-5">
                     <Image
-                      src={"./images/blog/blog-01.png"}
+                      src={getAssetPath("/images/blog/blog-01.png")}
                       width={350}
                       height={200}
                       alt="image"
                     />
                     <Image
-                      src={"./images/blog/blog-02.png"}
+                      src={getAssetPath("/images/blog/blog-02.png")}
                       width={350}
                       height={200}
                       alt="image"

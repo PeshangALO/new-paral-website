@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { getAssetPath } from "@/utils/assets";
 
 const About = () => {
   return (
@@ -29,13 +30,13 @@ const About = () => {
               className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
             >
               <Image
-                src="./images/about/about-light-01.png"
+                src={getAssetPath("/images/about/about-light-01.png")}
                 alt="About"
                 className="dark:hidden"
                 fill
               />
               <Image
-                src="./images/about/about-dark-01.png"
+                src={getAssetPath("/images/about/about-dark-01.png")}
                 alt="About"
                 className="hidden dark:block"
                 fill
@@ -181,13 +182,13 @@ const About = () => {
               className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
             >
               <Image
-                src="./images/about/about-light-02.svg"
+                src={getAssetPath("/images/about/about-light-02.svg")}
                 alt="About"
                 className="dark:hidden"
                 fill
               />
               <Image
-                src="./images/about/about-dark-02.svg"
+                src={getAssetPath("/images/about/about-dark-02.svg")}
                 alt="About"
                 className="hidden dark:block"
                 fill

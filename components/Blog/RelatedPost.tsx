@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import BlogData from "./blogData";
+import { getAssetPath } from "@/utils/assets";
 
 const RelatedPost = () => {
   return (
@@ -20,7 +21,7 @@ const RelatedPost = () => {
             <div className="max-w-45 relative h-18 w-45">
               {post.mainImage ? (
                 <Image
-                  src={post.mainImage}
+                  src={getAssetPath(post.mainImage)}
                   alt={post.title}
                   fill
                   className="rounded-md object-cover"

@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/utils/assets";
 
 const CTA = () => {
   return (
@@ -59,7 +60,7 @@ const CTA = () => {
                 <Image
                   width={299}
                   height={299}
-                  src="./images/shape/shape-06.png"
+                  src={getAssetPath("/images/shapes/shape-06.png")}
                   alt="Saly"
                   className="hidden xl:block"
                 />
@@ -71,14 +72,14 @@ const CTA = () => {
                   <Image
                     width={20}
                     height={20}
-                    src="./images/icon/icon-arrow-dark.svg"
+                    src={getAssetPath("/images/icon/icon-arrow-dark.svg")}
                     alt="Arrow"
                     className="dark:hidden"
                   />
                   <Image
                     width={20}
                     height={20}
-                    src="./images/icon/icon-arrow-light.svg"
+                    src={getAssetPath("/images/icon/icon-arrow-light.svg")}
                     alt="Arrow"
                     className="hidden dark:block"
                   />

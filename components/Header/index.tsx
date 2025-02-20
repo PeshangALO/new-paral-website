@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { getAssetPath } from "@/utils/assets";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -38,14 +39,14 @@ const Header = () => {
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
             <Image
-              src="./images/logo/logo-dark.svg"
+              src={getAssetPath("/images/logo/logo-dark.svg")}
               alt="logo"
               width={119.03}
               height={30}
               className="hidden w-full dark:block"
             />
             <Image
-              src="./images/logo/logo-light.svg"
+              src={getAssetPath("/images/logo/logo-light.svg")}
               alt="logo"
               width={119.03}
               height={30}

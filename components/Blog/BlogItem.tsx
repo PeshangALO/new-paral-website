@@ -3,6 +3,7 @@ import { Blog } from "@/types/blog";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/utils/assets";
 
 const BlogItem = ({ blog }: { blog: Blog }) => {
   const { _id, mainImage, title, metadata } = blog;
@@ -20,7 +21,7 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
       className="animate_top rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection"
     >
       <Link href={`/blog/blog-details/${_id}`} className="relative block aspect-[368/239]">
-        <Image src={mainImage} alt={title} fill className="rounded-md object-cover" />
+        <Image src={getAssetPath(mainImage)} alt={title} fill className="rounded-md object-cover" />
       </Link>
 
       <div className="px-4">
