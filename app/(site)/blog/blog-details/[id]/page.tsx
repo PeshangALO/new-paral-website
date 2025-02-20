@@ -4,15 +4,32 @@ import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
 import { Metadata } from "next";
 
-// ✅ Ensure `generateStaticParams()` returns a `Promise`
+// Define proper types for the page props
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
+// Generate static params
 export async function generateStaticParams() {
   return BlogData.map((post) => ({
     id: post._id.toString(),
   }));
 }
 
-// ✅ Ensure the component receives `params` properly
-const BlogDetailsPage = ({ params }: { params: { id: string } }) => {
+// Add metadata generation if needed
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const blog = BlogData.find((post) => post._id.toString() === params.id);
+  
+  return {
+    title: blog?.title || 'Blog Post',
+    description: blog?.metadata || 'Blog post details',
+  };
+}
+
+// Main page component with proper typing
+export default function BlogDetailsPage({ params }: Props) {
   const blog = BlogData.find((post) => post._id.toString() === params.id);
 
   if (!blog) {
@@ -27,7 +44,6 @@ const BlogDetailsPage = ({ params }: { params: { id: string } }) => {
           <div className="md:w-1/2 lg:w-[32%]">
             <RelatedPost />
           </div>
-
           {/* Main Blog Content */}
           <div className="lg:w-2/3">
             <div className="animate_top rounded-md border border-stroke bg-white p-7.5 shadow-solid-13 dark:border-strokedark dark:bg-blacksection md:p-10">
@@ -49,6 +65,4 @@ const BlogDetailsPage = ({ params }: { params: { id: string } }) => {
       </div>
     </section>
   );
-};
-
-export default BlogDetailsPage;
+}
