@@ -11,14 +11,8 @@ export async function generateStaticParams() {
   }));
 }
 
-// ✅ Correct `PageProps` type definition
-interface BlogPageProps {
-  params: { id: string };
-  id: string;
-}
-
 // ✅ Ensure the component receives `params` properly
-const BlogDetailsPage = ({ params }: BlogPageProps) => {
+const BlogDetailsPage = ({ params }: { params: { id: string } }) => {
   const blog = BlogData.find((post) => post._id.toString() === params.id);
 
   if (!blog) {
