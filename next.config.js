@@ -1,16 +1,19 @@
 /** @type {import('next').NextConfig} */
-
 const nextConfig = {
-  output: "export",
+  output: 'export',
   reactStrictMode: true,
-  swcMinify: true,
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/test-website' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/test-website' : '',
   images: {
-    domains: ["localhost"],
+    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './loader.js',
+    domains: ['localhost'],
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        port: "",
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
       },
     ],
   },
