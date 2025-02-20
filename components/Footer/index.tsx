@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { getAssetPath } from "@/utils/assets";
 
 const Footer = () => {
   return (
@@ -33,14 +32,14 @@ const Footer = () => {
                   <Image
                     width={110}
                     height={80}
-                    src={getAssetPath("/images/logo/logo-light.svg")}
+                    src="/imageslogo/logo-light.svg"
                     alt="Logo"
                     className="dark:hidden"
                   />
                   <Image
                     width={110}
                     height={80}
-                    src={getAssetPath("/images/logo/logo-dark.svg")}
+                    src="//imagesogo/logo-dark.svg"
                     alt="Logo"
                     className="hidden dark:block"
                   />

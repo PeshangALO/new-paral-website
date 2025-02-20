@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import FAQItem from "./FAQItem";
 import faqData from "./faqData";
-import { getAssetPath } from "@/utils/assets";
 
 const FAQ = () => {
   const [activeFaq, setActiveFaq] = useState(1);
@@ -21,13 +20,13 @@ const FAQ = () => {
           <div className="absolute -bottom-16 -z-1 h-full w-full">
             <Image
               fill
-              src={getAssetPath("/images/shape/shape-dotted-light.svg")}
+              src="/imagesshape/shape-dotted-light.svg"
               alt="Dotted"
               className="dark:hidden"
             />
             <Image
               fill
-              src={getAssetPath("/images/shape/shape-dotted-dark.svg")}
+              src="//imageshape/shape-dotted-light.svg"
               alt="Dotted"
               className="hidden dark:block"
             />

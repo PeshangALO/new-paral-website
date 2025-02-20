@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import { Brand } from "@/types/brand";
 import { motion } from "framer-motion";
-import { getAssetPath } from "@/utils/assets";
 
 const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { image, href, name, imageLight, id } = brand;
@@ -30,13 +29,13 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
       >
         <Image
           className="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
-          src={getAssetPath(image)}
+          src={image}
           alt={name}
           fill
         />
         <Image
           className="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
-          src={getAssetPath(imageLight)}
+          src={imageLight}
           alt={name}
           fill
         />

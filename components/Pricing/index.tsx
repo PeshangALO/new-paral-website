@@ -2,8 +2,6 @@
 import Image from "next/image";
 import SectionHeader from "../Common/SectionHeader";
 
-import { getAssetPath } from "@/utils/assets";
-
 const Pricing = () => {
   return (
     <>
@@ -27,7 +25,7 @@ const Pricing = () => {
           <div className="absolute -bottom-15 -z-1 h-full w-full">
             <Image
               fill
-              src={getAssetPath("/images/shape/shape-dotted-light.svg")}
+              src="./imagesshape/shape-dotted-light.svg"
               alt="Dotted"
               className="dark:hidden"
             />
