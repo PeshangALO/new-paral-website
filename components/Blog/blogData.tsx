@@ -18,7 +18,7 @@ const BlogData: Blog[] = [
   {
     _id: 3,
     mainImage: "/images/blog/blog-03.png",
-    title: "Tips to quickly improve your coding speed.",
+    title: "🟩 Tips to quickly improve your coding speed.",
     metadata:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
