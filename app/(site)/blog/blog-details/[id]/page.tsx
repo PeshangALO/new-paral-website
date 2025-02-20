@@ -4,22 +4,21 @@ import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
 import { Metadata } from "next";
 
-// ✅ Define `generateStaticParams()` to statically generate pages
+// ✅ Ensure `generateStaticParams()` returns a `Promise`
 export async function generateStaticParams(): Promise<{ id: string }[]> {
   return BlogData.map((post) => ({
     id: post._id.toString(), // Ensure ID is a string
   }));
 }
 
-// ✅ Fix: Correctly define `params` using Next.js `PageProps`
+// ✅ Correct `PageProps` type definition
 interface PageProps {
   params: { id: string };
 }
 
-// ✅ Fix: Ensure the function correctly expects `params`
+// ✅ Ensure the component receives `params` properly
 const BlogDetailsPage = ({ params }: PageProps) => {
-  // Find the blog post by ID
-  const blog = BlogData.find((post) => post._id === Number(params.id));
+  const blog = BlogData.find((post) => post._id.toString() === params.id);
 
   if (!blog) {
     return <p className="text-center text-xl">Blog post not found</p>;
