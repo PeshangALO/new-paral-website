@@ -17,14 +17,14 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: Promise<PageParams> 
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<PageParams>
 }): Promise<Metadata> {
   const resolvedParams = await params;
   const blog = BlogData.find((post) => post._id.toString() === resolvedParams.id);
-  
+
   return {
     title: blog?.title || 'Blog Post',
     description: blog?.metadata || 'Blog post details',
@@ -32,10 +32,10 @@ export async function generateMetadata({
 }
 
 // Page component
-export default async function Page({ 
-  params 
-}: { 
-  params: Promise<PageParams> 
+export default async function Page({
+  params
+}: {
+  params: Promise<PageParams>
 }) {
   const resolvedParams = await params;
   const blog = BlogData.find((post) => post._id.toString() === resolvedParams.id);
@@ -56,11 +56,10 @@ export default async function Page({
           <div className="lg:w-2/3">
             <div className="animate_top rounded-md border border-stroke bg-white p-7.5 shadow-solid-13 dark:border-strokedark dark:bg-blacksection md:p-10">
               <Image
-                src={blog.mainImage}
+                src={blog.mainImage.replace("./images", "../../images")}
                 alt={blog.title}
                 width={700}
                 height={400}
-                className="rounded-md"
               />
               <h2 className="text-3xl font-semibold text-black dark:text-white mt-6">
                 {blog.title}
