@@ -3,7 +3,7 @@
 const nextConfig = {
   output: "export",
   reactStrictMode: true,
-  swcMinify: true,
+  // swcMinify: true,
   images: {
     domains: ["localhost"],
     remotePatterns: [

@@ -2,22 +2,20 @@ import BlogData from "@/components/Blog/blogData";
 import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
-import { Metadata } from "next";
 
-// ✅ Ensure `generateStaticParams()` returns a `Promise`
+// Return a Promise in generateStaticParams
 export async function generateStaticParams(): Promise<{ id: string }[]> {
   return BlogData.map((post) => ({
-    id: post._id.toString(), // Ensure ID is a string
+    id: post._id.toString(),
   }));
 }
 
-// ✅ Correct `PageProps` type definition
-interface PageProps {
+// Update the prop type for the component
+export default function BlogDetailsPage({
+  params,
+}: {
   params: { id: string };
-}
-
-// ✅ Ensure the component receives `params` properly
-const BlogDetailsPage = ({ params }: PageProps) => {
+}) {
   const blog = BlogData.find((post) => post._id.toString() === params.id);
 
   if (!blog) {
@@ -54,6 +52,4 @@ const BlogDetailsPage = ({ params }: PageProps) => {
       </div>
     </section>
   );
-};
-
-export default BlogDetailsPage;
+}
