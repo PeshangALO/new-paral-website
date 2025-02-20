@@ -14,6 +14,7 @@ export async function generateStaticParams() {
 // ✅ Correct `PageProps` type definition
 interface BlogPageProps {
   params: { id: string };
+  id: string;
 }
 
 // ✅ Ensure the component receives `params` properly
