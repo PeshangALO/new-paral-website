@@ -4,22 +4,26 @@ import SharePost from "@/components/Blog/SharePost";
 import Image from "next/image";
 import { Metadata } from "next";
 
-// Define proper types for the page props
-type Props = {
-  params: {
-    id: string;
-  };
-};
+// Define the params interface
+interface PageParams {
+  id: string;
+}
+
+// Define proper page props type
+interface PageProps {
+  params: PageParams;
+  searchParams: Record<string, string | string[] | undefined>;
+}
 
 // Generate static params
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<PageParams[]> {
   return BlogData.map((post) => ({
     id: post._id.toString(),
   }));
 }
 
-// Add metadata generation if needed
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+// Add metadata generation
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const blog = BlogData.find((post) => post._id.toString() === params.id);
   
   return {
@@ -28,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Main page component with proper typing
-export default function BlogDetailsPage({ params }: Props) {
+// Page component
+async function BlogDetailsPage({ params, searchParams }: PageProps) {
   const blog = BlogData.find((post) => post._id.toString() === params.id);
 
   if (!blog) {
@@ -66,3 +70,5 @@ export default function BlogDetailsPage({ params }: Props) {
     </section>
   );
 }
+
+export default BlogDetailsPage;
