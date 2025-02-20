@@ -1,20 +1,19 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
-  output: 'export',
+  output: "export",
   reactStrictMode: true,
+  swcMinify: true,
   images: {
-    unoptimized: true, // Required for static export
-    domains: ['localhost'],
+    domains: ["localhost"],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'cdn.sanity.io',
-        port: '',
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
       },
     ],
   },
-  // Add basePath if deploying to GitHub Pages
-  basePath: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
 };
 
 module.exports = nextConfig;
