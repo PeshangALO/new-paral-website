@@ -1,7 +1,7 @@
 export default function customImageLoader({ src }) {
     // Ensure src is a string
     const imageSrc = String(src || '');
-    const baseUrl = process.env.NODE_ENV === 'production' ? '/test-website' : '';
+    const baseUrl = process.env.NODE_ENV === 'production' ? '/new-paral-website' : '';
     
     // Handle absolute URLs
     if (imageSrc.startsWith('http://') || imageSrc.startsWith('https://')) {
