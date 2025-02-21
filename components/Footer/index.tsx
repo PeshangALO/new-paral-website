@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <>
       <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection">
-        <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+        <div>
           {/* <!-- Footer Top --> */}
-          <div className="py-20 lg:py-25">
-            <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0">
+          <div className="py-10">
+            <div className="flex justify-center gap-0">
               <motion.div
                 variants={{
                   hidden: {
@@ -31,37 +31,24 @@ const Footer = () => {
               >
                 <a href="/" className="relative">
                   <Image
-                    width={110}
+                    width={300}
                     height={80}
-                    src={getAssetPath("/images/logo/logo-light.svg")}
+                    src={getAssetPath("/images/logo/black-nav-logo.svg")}
                     alt="Logo"
                     className="dark:hidden"
                   />
                   <Image
                     width={110}
                     height={80}
-                    src={getAssetPath("/images/logo/logo-dark.svg")}
+                    src={getAssetPath("/images/logo/white-nav-logo.svg")}
                     alt="Logo"
                     className="hidden dark:block"
                   />
                 </a>
 
-                <p className="mb-10 mt-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-
-                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
-                  contact
-                </p>
-                <a
-                  href="#"
-                  className="text-itemtitle font-medium text-black dark:text-white"
-                >
-                  hello@solid.com
-                </a>
               </motion.div>
 
-              <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
+{/*               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
                 <motion.div
                   variants={{
                     hidden: {
@@ -79,9 +66,9 @@ const Footer = () => {
                   transition={{ duration: 1, delay: 0.1 }}
                   viewport={{ once: true }}
                   className="animate_top"
-                >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Quick Links
+                > */}
+{/*                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                    Kjapp navigering
                   </h4>
 
                   <ul>
@@ -91,14 +78,6 @@ const Footer = () => {
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Home
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Product
                       </a>
                     </li>
                     <li>
@@ -175,9 +154,9 @@ const Footer = () => {
                         Contact Us
                       </a>
                     </li>
-                  </ul>
-                </motion.div>
-
+                  </ul> */}
+            {/*     </motion.div> */}
+{/* 
                 <motion.div
                   variants={{
                     hidden: {
@@ -195,15 +174,15 @@ const Footer = () => {
                   transition={{ duration: 1, delay: 0.1 }}
                   viewport={{ once: true }}
                   className="animate_top"
-                >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                > */}
+{/*                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
                     Newsletter
                   </h4>
                   <p className="mb-4 w-[90%]">
                     Subscribe to receive future updates
-                  </p>
+                  </p> */}
 
-                  <form action="#">
+{/*                   <form action="#">
                     <div className="relative">
                       <input
                         type="text"
@@ -237,16 +216,16 @@ const Footer = () => {
                         </svg>
                       </button>
                     </div>
-                  </form>
-                </motion.div>
-              </div>
+                  </form> */}
+{/*                 </motion.div> */}
+{/*               </div> */}
             </div>
           </div>
           {/* <!-- Footer Top --> */}
 
           {/* <!-- Footer Bottom --> */}
           <div className="flex flex-col flex-wrap items-center justify-center gap-5 border-t border-stroke py-7 dark:border-strokedark lg:flex-row lg:justify-between lg:gap-0">
-            <motion.div
+{/*             <motion.div
               variants={{
                 hidden: {
                   opacity: 0,
@@ -281,7 +260,7 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               variants={{
@@ -302,7 +281,7 @@ const Footer = () => {
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()} Solid. All rights reserved
+                &copy; {new Date().getFullYear()} Paral Dynamic AS. All rights reserved
               </p>
             </motion.div>
 
@@ -325,7 +304,7 @@ const Footer = () => {
               className="animate_top"
             >
               <ul className="flex items-center gap-5">
-                <li>
+{/*                 <li>
                   <a href="#" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
@@ -348,8 +327,8 @@ const Footer = () => {
                       </defs>
                     </svg>
                   </a>
-                </li>
-                <li>
+                </li> */}
+{/*                 <li>
                   <a href="#" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
@@ -372,7 +351,7 @@ const Footer = () => {
                       </defs>
                     </svg>
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href="#" aria-label="social icon">
                     <svg
@@ -397,7 +376,7 @@ const Footer = () => {
                     </svg>
                   </a>
                 </li>
-                <li>
+{/*                 <li>
                   <a href="#" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
@@ -416,7 +395,7 @@ const Footer = () => {
                       </defs>
                     </svg>
                   </a>
-                </li>
+                </li> */}
               </ul>
             </motion.div>
           </div>

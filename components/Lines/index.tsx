@@ -6,6 +6,9 @@ const Lines = () => {
       <span className="flex h-full w-[1px] animate-line1 bg-stroke dark:bg-strokedark"></span>
       <span className="flex h-full w-[1px] animate-line2 bg-stroke dark:bg-strokedark"></span>
       <span className="flex h-full w-[1px] animate-line3 bg-stroke dark:bg-strokedark"></span>
+      <span className="flex h-full w-[1px] animate-line1 bg-stroke dark:bg-strokedark"></span>
+      <span className="flex h-full w-[1px] animate-line2 bg-stroke dark:bg-strokedark"></span>
+      <span className="flex h-full w-[1px] animate-line3 bg-stroke dark:bg-strokedark"></span>
     </div>
   );
 };
