@@ -33,7 +33,7 @@ export default function Home() {
       <FunFact />
       <Integration />
       <Testimonial />
-      <Pricing />
+{/*       <Pricing /> */}
       <Contact />
       <Blog />
     </main>
