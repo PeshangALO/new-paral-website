@@ -61,7 +61,7 @@ const Header = () => {
             onClick={() => setNavigationOpen(!navigationOpen)}
           >
             <span className="relative block h-5.5 w-5.5 cursor-pointer">
-              <span className="absolute right-0 block h-full w-full">
+              <span className="absolute right-0 block h-full w-full ">
                 <span
                   className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "!w-full delay-300" : "w-0"
                     }`}
@@ -92,7 +92,7 @@ const Header = () => {
 
         {/* Nav Menu Start   */}
         <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${navigationOpen &&
+          className={`no-scrollbar invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${navigationOpen &&
             "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
             }`}
         >
@@ -133,8 +133,8 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-primary hover:text-primary"
-                          : "hover:text-primary"
+                          ? "text-black dark:text-white font-bold hover:text-black dark:hover:text-white"
+                          : "hover:text-black dark:hover:text-white"
                       }
                     >
                       {menuItem.title}
@@ -147,14 +147,6 @@ const Header = () => {
 
 {          <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
-
-{/*             <Link
-              href="https://github.com/NextJSTemplates/solid-nextjs"
-              className="text-regular font-medium text-waterloo hover:text-primary"
-            >
-              GitHub Repo 🌟
-            </Link> */}
-
 
           </div>}
         </div>
