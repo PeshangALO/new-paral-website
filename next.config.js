@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/test-website' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/test-website' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/new-paral-website' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/new-paral-website' : '',
   images: {
     unoptimized: true,
     loader: 'custom',
