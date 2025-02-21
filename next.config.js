@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/new-paral-website' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/new-paral-website' : '',
+  assetPrefix: 'https://paral.no', // Custom domain for assets
+  basePath: '', // No need to prepend basePath, since we use the full domain
   images: {
     unoptimized: true,
     loader: 'custom',
@@ -11,7 +11,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '*',
+        hostname: 'paral.no', // Allow images from your custom domain
         port: '',
         pathname: '**',
       },

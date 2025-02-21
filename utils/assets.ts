@@ -1,7 +1,9 @@
 export const getAssetPath = (path: string) => {
-    const baseUrl = process.env.NODE_ENV === 'production' ? '/new-paral-website' : '';
-    if (path.startsWith('http') || path.startsWith('https')) {
-      return path;
-    }
-    return `${baseUrl}${path}`;
-  };
+  const customDomain = 'https://paral.no'; // Your custom domain
+
+  if (path.startsWith('http') || path.startsWith('https')) {
+    return path; // If the path is already a full URL, return it as is
+  }
+
+  return `${customDomain}${path}`; // Prepend the custom domain
+};
