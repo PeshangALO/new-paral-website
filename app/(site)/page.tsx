@@ -24,14 +24,14 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <CTA />
-      <FAQ />
-      <Brands />
+{/*       <CTA /> */}
+{/*       <FAQ /> */}
       <Feature />
-      <About />
-      <FeaturesTab />
-      <FunFact />
-      <Integration />
+      <Brands />
+{/*       <About /> */}
+{/*       <FeaturesTab /> */}
+{/*       <FunFact /> */}
+{/*       <Integration /> */}
       <Testimonial />
 {/*       <Pricing /> */}
       <Contact />

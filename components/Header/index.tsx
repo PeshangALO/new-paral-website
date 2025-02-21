@@ -39,7 +39,7 @@ const Header = () => {
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
             <Image
-              src={getAssetPath("/images/logo/black-nav-logo.svg")}
+              src={getAssetPath("/images/logo/white-nav-logo.svg")}
               alt="logo"
               width={119.03}
               height={30}
@@ -145,18 +145,18 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="mt-7 flex items-center gap-6 xl:mt-0">
+{          <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
 
-            <Link
+{/*             <Link
               href="https://github.com/NextJSTemplates/solid-nextjs"
               className="text-regular font-medium text-waterloo hover:text-primary"
             >
               GitHub Repo 🌟
-            </Link>
+            </Link> */}
 
 
-          </div>
+          </div>}
         </div>
       </div>
     </header>

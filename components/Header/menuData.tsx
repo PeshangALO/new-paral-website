@@ -3,13 +3,13 @@ import { Menu } from "@/types/menu";
 const menuData: Menu[] = [
   {
     id: 1,
-    title: "Home",
+    title: "Hjem",
     newTab: false,
     path: "/",
   },
   {
     id: 2,
-    title: "Features",
+    title: "Tjenester",
     newTab: false,
     path: "/#features",
   },
@@ -19,17 +19,17 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/blog",
   },
-  {
+/*   {
     id: 2.3,
     title: "Docs",
     newTab: false,
     path: "/docs",
-  },
-  {
+  }, */
+/*   {
     id: 3,
     title: "Pages",
-    newTab: false,
-    submenu: [
+    newTab: false, */
+/*     submenu: [
       {
         id: 31,
         title: "Blog Grid",
@@ -66,12 +66,12 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/error",
       },
-    ],
-  },
+    ], */
+ // },
 
   {
     id: 4,
-    title: "Support",
+    title: "Kontakt Oss",
     newTab: false,
     path: "/support",
   },

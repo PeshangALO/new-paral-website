@@ -30,12 +30,11 @@ const CTA = () => {
               className="animate_left md:w-[70%] lg:w-1/2"
             >
               <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
-                Join With Us Today & Increase Your Productivity
+                Vi vil høre fra deg!
               </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor eros. Donec vitae tortor lacus. Phasellus
-                aliquam ante in maximus.
+              <p className="dark:text-gray-100">
+              Vi samarbeider tett med våre kunder for å skape skreddersydde løsninger som møter deres unike behov og hjelper dem med å nå sine mål.  
+                Vårt ekspertteam er klare til å utvikle de perfekte produktene som driver din virksomhet fremover.
               </p>
             </motion.div>
             <motion.div
@@ -56,19 +55,12 @@ const CTA = () => {
               viewport={{ once: true }}
               className="animate_right lg:w-[45%]"
             >
-              <div className="flex items-center justify-end xl:justify-between">
-                <Image
-                  width={299}
-                  height={299}
-                  src={getAssetPath("/images/shapes/shape-06.png")}
-                  alt="Saly"
-                  className="hidden xl:block"
-                />
+              <div className="flex justify-end p-[5rem]">
                 <a
                   href="/auth/signup"
                   className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                 >
-                  Sign up free
+                  Kontakt Oss
                   <Image
                     width={20}
                     height={20}
