@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import AnimatedBox from "@/components/AnimatedBox/AnimatedBox"
 
 import { getAssetPath } from "@/utils/assets";
 
@@ -17,10 +18,11 @@ const Hero = () => {
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
-
+              <AnimatedBox>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-black dark:text-white">
               Paral Dynamic
               </h1>
+              </AnimatedBox>
               <p className="dark:text-white text-black">
                 Vi er en gjeng med entusiastiske utviklere, som ønsker å hjelpe deg med å finne digitale løsninger for dine behov!
                 Vi spesialiserer oss på å forvandle ideer til kraftfulle digitale løsninger, med tjenester innen avansert AI, maskinlæring og big data-analyser.
