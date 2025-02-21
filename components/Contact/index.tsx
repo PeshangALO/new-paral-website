@@ -8,10 +8,10 @@ const Contact = () => {
   const [hasMounted, setHasMounted] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    firmname: "",
-    customer_email: "",
-    subject: "",
-    tlf: "",
+    company: "",
+    email: "",
+    title: "",
+    phone: "",
     message: ""
   });
   const [formStatus, setFormStatus] = useState({
@@ -37,57 +37,42 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted', formData);
     setIsSubmitting(true);
     setFormStatus({ message: "", isError: false });
-
+  
+    // Mapping form data to the required structure
+    const mappedData = {
+      firmname: formData.company,
+      customer_email: formData.email,
+      subject: formData.title,
+      message: formData.message,
+      tlf: formData.phone,
+    };
+  
     try {
-      // First, send to your local API route
-      const response = await fetch('http://email-provider.paral.no/send-email', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          to: "recipient@example.com", // Replace with actual recipient
-          from: formData.email,
-          subject: `New Contact Form Submission from ${formData.company}`,
-          company: formData.company,
-          contactPerson: formData.title,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message
-        }),
+        body: JSON.stringify(mappedData), // Send the mapped data
       });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to send message');
+  
+      const responseData = await response.json();
+  
+      if (response.ok) {
+        setFormStatus({ message: responseData.message || "Email sent successfully!", isError: false });
+      } else {
+        setFormStatus({ message: responseData.error || "Failed to send email", isError: true });
       }
-
-      // Clear form and show success message
-      setFormStatus({
-        message: "Melding sendt! Vi tar kontakt snart.",
-        isError: false
-      });
-      setFormData({
-        company: "",
-        email: "",
-        title: "",
-        phone: "",
-        message: ""
-      });
     } catch (error) {
-      console.error('Submission error:', error);
-      setFormStatus({
-        message: `Det oppstod en feil: ${error.message}`,
-        isError: true
-      });
+      setFormStatus({ message: "Failed to send email", isError: true });
     } finally {
       setIsSubmitting(false);
     }
   };
+  
+  
 
   return (
     <>
