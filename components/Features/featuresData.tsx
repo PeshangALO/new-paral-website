@@ -18,7 +18,7 @@ const featuresData: Feature[] = [
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
-    title: "Web/App-utvikling",
+    title: "App-utvikling",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
   },
@@ -35,7 +35,13 @@ const featuresData: Feature[] = [
     title: "IT-rådgiving",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
-  },
+  },  {
+    id: 5,
+    icon: "/images/icon/icon-05.svg",
+    title: "Web-utvikling",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+  }
 ];
 
 export default featuresData;

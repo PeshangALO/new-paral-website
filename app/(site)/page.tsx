@@ -27,7 +27,7 @@ export default function Home() {
 {/*       <CTA /> */}
 {/*       <FAQ /> */}
       <Feature />
-      <Brands />
+{/*       <Brands /> */}
 {/*       <About /> */}
 {/*       <FeaturesTab /> */}
 {/*       <FunFact /> */}

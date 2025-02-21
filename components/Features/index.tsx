@@ -3,21 +3,20 @@ import React from "react";
 import featuresData from "./featuresData";
 import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
+import AnimatedBox from "@/components/AnimatedBox/AnimatedBox";
 
 const Feature = () => {
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
       <section id="features" className="py-20 lg:py-25 xl:py-30">
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+        <div className="mx-auto max-w-c-1315 px-4  md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
               title: "HVA KAN VI TILBY?",
               subtitle: "Våre Tjenester",
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.`,
+              description: `Vi tilbyr tjenester innenfor en rekke forskjellige IT-sjangere.`,
             }}
           />
           {/* <!-- Section Title End --> */}
