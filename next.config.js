@@ -3,7 +3,7 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   assetPrefix: 'https://paral.no', // Custom domain for assets
-  basePath: '', // No need to prepend basePath, since we use the full domain
+  basePath: '/new-paral-website', // Adjust based on your GitHub Pages path
   images: {
     unoptimized: true,
     loader: 'custom',
@@ -17,8 +17,7 @@ const nextConfig = {
       },
     ],
   },
-  // Add this to help with static export
-  trailingSlash: true,
+  trailingSlash: true, // Ensure trailing slashes in the URLs for static export
 };
 
 module.exports = nextConfig;
