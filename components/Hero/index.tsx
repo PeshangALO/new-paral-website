@@ -22,7 +22,7 @@ const Hero = () => {
                 ❤️ Solid - A Complete SaaS Web Template
               </h4> */}
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-black dark:text-white">
-              <AnimatedBox>Paral Dynamic</AnimatedBox>
+              Paral Dynamic
               </h1>
               <p className="dark:text-white text-black">
                 Vi er en gjeng med entusiastiske utviklere, som ønsker å hjelpe deg med å finne digitale løsninger for dine behov!

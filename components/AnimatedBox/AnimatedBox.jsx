@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState, useRef } from 'react';
 
-const AnimatedBox = ({ children, fillColor = '#F7F7F2', transitionDuration = 1500 }) => {
+const AnimatedBox = ({ children, fillColor = '#F7F7F2', transitionDuration = 2000 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
 
