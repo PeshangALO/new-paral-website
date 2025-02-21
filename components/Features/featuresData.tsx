@@ -24,14 +24,14 @@ const featuresData: Feature[] = [
   },
   {
     id: 4,
-    icon: "/images/icon/icon-04.svg",
+    icon: "/images/icon/icon-01.svg",
     title: "Big data/database",
     description:
       "Vi hjelper deg å håndtere og analysere store datamengder. Med optimaliserte databaseløsninger får du tilgang til verdifull informasjon og kan ta datadrevne beslutninger.",
   },
   {
     id: 5,
-    icon: "/images/icon/icon-05.svg",
+    icon: "/images/icon/icon-04.svg",
     title: "IT-rådgiving",
     description:
       "Vi gir veiledning for din digitale utvikling. Med bred erfaring hjelper vi deg å velge de beste IT-løsningene som støtter din virksomhets vekst og målsettinger.",

@@ -61,6 +61,16 @@ const Testimonial = () => {
                 clickable: true,
               }}
               modules={[Autoplay, Pagination]}
+              breakpoints={{
+                // when window width is >= 640px
+                0: {
+                  slidesPerView: 1,
+                },
+                // when window width is >= 768px
+                768: {
+                  slidesPerView: 1,
+                },
+              }}
             >
               {testimonialData.map((review) => (
                 <SwiperSlide key={review?.id}>
