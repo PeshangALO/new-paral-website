@@ -40,7 +40,6 @@ const Contact = () => {
     setIsSubmitting(true);
     setFormStatus({ message: "", isError: false });
   
-    // Mapping form data to the required structure
     const mappedData = {
       firmname: formData.company,
       customer_email: formData.email,
@@ -50,18 +49,18 @@ const Contact = () => {
     };
   
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://email-provider.paral.no/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(mappedData), // Send the mapped data
+        body: JSON.stringify(mappedData),
       });
   
       const responseData = await response.json();
   
       if (response.ok) {
-        setFormStatus({ message: responseData.message || "Email sent successfully!", isError: false });
+        setFormStatus({ message: "Email sent successfully!", isError: false });
       } else {
         setFormStatus({ message: responseData.error || "Failed to send email", isError: true });
       }
