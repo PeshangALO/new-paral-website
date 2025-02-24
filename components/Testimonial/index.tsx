@@ -14,7 +14,7 @@ import { testimonialData } from "./testimonialData";
 const Testimonial = () => {
   return (
     <>
-      <section className="py-[5rem]">
+      <section>
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <div className="animate_top mx-auto text-center">
@@ -54,7 +54,7 @@ const Testimonial = () => {
               spaceBetween={50}
               slidesPerView={2}
               autoplay={{
-                delay: 4500,
+                delay: 2500,
                 disableOnInteraction: false,
               }}
               pagination={{
@@ -68,7 +68,7 @@ const Testimonial = () => {
                 },
                 // when window width is >= 768px
                 768: {
-                  slidesPerView: 1,
+                  slidesPerView: 2,
                 },
               }}
             >
