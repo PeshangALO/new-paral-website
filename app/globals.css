@@ -5,11 +5,13 @@
 /* third-party libraries CSS */
 
 .testimonial-01 .swiper-pagination-bullet {
-  @apply h-2.5 w-2.5 bg-stroke opacity-100;
+  @apply h-2.5 w-2.5 bg-gray-300 opacity-100 dark:bg-slate-600;
 }
 .testimonial-01 .swiper-pagination-bullet-active {
-  @apply w-5 rounded-full bg-primary;
+  @apply w-5 rounded-full bg-primary dark:bg-white;
 }
+
+
 
 .testimonial-01 .swiper-pagination {
   @apply relative pt-[50px];

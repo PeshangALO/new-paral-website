@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className="lg:w-1/2">
-              <h1 className="font-bold tracking-tighter text-5xl lg:justify-self-start justify-self-center :text-6xl/none dark:text-black text-white">
+              <h1 className="font-bold tracking-tighter text-4xl sm:text-6xl lg:justify-self-start justify-self-center :text-6xl/none dark:text-black text-white">
             <AnimatedBox>Paral Dynamic</AnimatedBox>
               </h1>
               <p className="dark:text-white text-black py-6">

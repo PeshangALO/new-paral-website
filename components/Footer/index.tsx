@@ -111,7 +111,7 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-5">
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <a href="https://www.linkedin.com/company/paral-dynamic/posts/?feedView=all" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -155,7 +155,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="animate_top"
             >
-              <p>
+              <p className="text-center">
                 &copy; {new Date().getFullYear()} Paral Dynamic AS. All rights reserved
               </p>
             </motion.div>

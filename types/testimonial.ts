@@ -2,7 +2,16 @@ export type Testimonial = {
   id: number;
   name: string;
   destination?: string;
-  image: any;
+  size?: {
+    width: number;
+    height: number;
+  }  
+  image: 
+    | any  
+    |{    
+      light: any;
+      dark: any;
+    };
   content: string;
   designation: string;
 };

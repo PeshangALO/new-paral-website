@@ -2,21 +2,21 @@ import { Brand } from "@/types/brand";
 
 const brandData: Brand[] = [
   {
-    id: 1,
+    id: 0.3,
     name: "Vigi",
-    href: "#",
+    href: "https://www.vigi.no/",
     image: "/images/brand/vigiSystems-light.svg",
     imageLight: "/images/brand/vigiSystems-dark.svg",
   },
   {
-    id: 2,
+    id: 0.6,
     name: "GADR",
-    href: "#",
+    href: "https://gadr.no/lander",
     image: "/images/brand/GADR-light.svg",
     imageLight: "/images/brand/GADR-dark.svg",
   },
   {
-    id: 3,
+    id: 0.9,
     name: "Core Capacity",
     href: "#",
     image: "/images/brand/CoreCapacity-light.svg",

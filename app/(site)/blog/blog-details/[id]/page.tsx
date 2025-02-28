@@ -65,7 +65,13 @@ export default async function Page({
                             <h2 className="text-3xl font-semibold text-black dark:text-white mt-6">
                                 {blog.title}
                             </h2>
-                            <p className="mt-4 text-gray-600">{blog.metadata}</p>
+                            <div className="flex justify-between">
+                            <h5>
+                               Author: {blog.author.name}
+                            </h5>
+                            <h5>Published: {blog.publishedAt}</h5>
+                            </div>
+                            <p className="mt-4 text-gray-600">{blog.body}</p>
                             <SharePost />
                         </div>
                     </div>

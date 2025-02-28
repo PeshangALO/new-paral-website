@@ -1,6 +1,6 @@
 export type Author = {
   name: string;
-  image: string;
+  image: string | null;
   bio?: string;
   _id?: number | string;
   _ref?: number | string;
@@ -13,7 +13,7 @@ export type Blog = {
   metadata?: string;
   body?: string;
   mainImage?: any;
-  author?: Author;
+  author: Author;
   tags?: string[];
   publishedAt?: string;
 };

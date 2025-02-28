@@ -3,10 +3,10 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support Page - Solid SaaS Boilerplate",
+  title: "Kontakt oss skjema",
 
   // other metadata
-  description: "This is Support page for Solid Pro"
+  description: "Dette er en side der du kontakte kontakte oss. Vi vil gjerne høre fra deg!"
 };
 
 const SupportPage = () => {

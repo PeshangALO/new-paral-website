@@ -15,9 +15,8 @@ import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
   title: "Paral Dynamic",
+  description: "Transforming and helping businesses through intelligent software solutions...",
 
-  // other metadata
-  description: "Transforming and helping businesses through intelligent software solutions..."
 
 }
 

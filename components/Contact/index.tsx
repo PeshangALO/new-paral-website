@@ -4,9 +4,15 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { getAssetPath } from "@/utils/assets";
 
+import { usePathname } from "next/navigation";
+
 const Contact = () => {
   const [hasMounted, setHasMounted] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const pathname = usePathname();
+  const ifKontaktOssPage = pathname === '/kontakt-oss/';
+
   const [formData, setFormData] = useState({
     company: "",
     email: "",
@@ -75,7 +81,7 @@ const Contact = () => {
 
   return (
     <>
-      <section id="support" className="px-4 md:px-8 2xl:px-0">
+      <section id="kontakt-oss" className="px-4 md:px-8 2xl:px-0">
         <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
           <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
@@ -178,7 +184,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Beskjed"
-                    rows={4}
+                    rows={ifKontaktOssPage ? 11 : 4}
                     required
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                   ></textarea>
@@ -208,7 +214,7 @@ const Contact = () => {
                 </div>
               </form>
             </motion.div>
-
+            
             <motion.div
               variants={{
                 hidden: {
@@ -242,6 +248,26 @@ const Contact = () => {
                   <a href="#">kontakt@paral.com</a>
                 </p>
               </div>
+
+              {ifKontaktOssPage ?  (
+              <div className="mt-10 mb-7">
+                <h3 className="mb-4">Finn oss på kartet</h3>
+                <div className="w-full h-48 md:h-64 lg:h-80 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
+
+                  <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400">
+                  <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2093.7872365033765!2d8.002230!3d58.172200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463816cc87d5983b%3A0xf7da11b3d98a799!2sGimlemoen%2015%2C%204630%20Kristiansand!5e0!3m2!1sen!2sno!4v1665584783230!5m2!1sen!2sno&zoom=20"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        loading="lazy"
+        title="Our location"
+      ></iframe>
+                  </div>
+                </div>
+              </div>
+              ) : null}
+
             </motion.div>
           </div>
         </div>

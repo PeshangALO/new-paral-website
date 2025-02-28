@@ -67,7 +67,7 @@ const Testimonial = () => {
                   slidesPerView: 1,
                 },
                 // when window width is >= 768px
-                768: {
+                1024: {
                   slidesPerView: 2,
                 },
               }}
