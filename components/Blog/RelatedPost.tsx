@@ -13,12 +13,13 @@ const RelatedPost = () => {
 
       <div>
         {BlogData.slice(0, 3).map((post) => (
+          <Link href={`/blog/blog-details/${post._id}`}>
           <div
-            className="mb-7.5 flex flex-wrap gap-4 xl:flex-nowrap 2xl:gap-6"
+            className="mb-7.5 flex gap-4 xl:flex-nowrap 2xl:gap-6 hover:rounded-md hover:bg-gray-200 dark:hover:rounded-md dark:hover:bg-slate-700 transition"
             key={post._id} // ✅ Better key usage
           >
             {/* Image */}
-            <div className="max-w-45 relative h-18 w-45">
+            <div className="max-w-45 flex relative h-18 w-45">
               {post.mainImage ? (
                 <Image
                   src={getAssetPath(post.mainImage)}
@@ -33,12 +34,11 @@ const RelatedPost = () => {
             </div>
 
             {/* Title with Link */}
-            <h5 className="text-md font-medium text-black transition-all duration-300 hover:text-primary dark:text-white dark:hover:text-primary">
-              <Link href={`/blog/blog-details/${post._id}`}>
+            <h5 className="text-md self-center font-medium text-black transition-all duration-300 hover:text-primary dark:text-white ">
                 {post.title.length > 40 ? `${post.title.slice(0, 40)}...` : post.title}
-              </Link>
             </h5>
           </div>
+        </Link>
         ))}
       </div>
     </div>

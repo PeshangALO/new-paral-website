@@ -9,7 +9,8 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
   const { _id, mainImage, title, metadata } = blog;
 
   return (
-    <div className="group relative rounded-lg">
+    <div className="group relative max-w-[30rem] min-w-[20rem] basis-70 flex-1 rounded-lg">
+      <Link href={`/blog/blog-details/${_id}`}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: -20 },
@@ -21,25 +22,24 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
             transition: {duration: 0.1}
           }
         }
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="cursor-pointer animate_top rounded bg-gray-100 p-4 pb-9 shadow-solid-8 dark:bg-slate-900 relative z-10"
+        className="h-full cursor-pointer animate_top rounded bg-gray-100 p-4 pb-9 shadow-solid-8 dark:bg-slate-900 relative z-10"
       >
-        <Link href={`/blog/blog-details/${_id}`} className="relative block aspect-[368/239]">
-          <Image src={getAssetPath(mainImage)} alt={title} fill className="rounded-md object-cover" />
-        </Link>
+        <div className="relative block aspect-[368/239]">
+          <Image src={getAssetPath(mainImage)} alt={title} fill className="relative block aspect-[368/239] rounded-md object-cover" />
+        </div>
 
         <div className="px-4">
           <h3 className="mb-3.5 mt-7.5 line-clamp-2 inline-block text-lg font-medium text-black dark:text-white duration-300">
-            <Link href={`/blog/blog-details/${_id}`}>
               {`${title.slice(0, 40)}...`}
-            </Link>
           </h3>
           <p className="line-clamp-3">{metadata}</p>
         </div>
       </motion.div>
+            </Link>
 
 
       <div className="absolute -inset-0.5 z-5 rounded-full pointer-events-none">

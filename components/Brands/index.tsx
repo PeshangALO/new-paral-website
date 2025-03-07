@@ -27,9 +27,9 @@ const Brands = () => {
         viewport={{ once: true }}
         className="animate_top mx-auto text-center"
       >
-      <div className="absolute -top-15 md:-top-27 left-[5rem] md:left-[10rem] lg:left-[20rem] border flex justify-center items-center h-20 w-40 md:h-30 md:w-60 border-stroke bg-alabaster dark:border-strokedark dark:bg-black">
+      <div className="flex justify-center items-center h-20 border-stroke  dark:border-strokedark">
         <h2 className="border-solid font-bold dark:text-white text-black text-4xl md:text-5xl">
-        Kunder
+        Våre kunder
         </h2>
       </div>
      </motion.div> 

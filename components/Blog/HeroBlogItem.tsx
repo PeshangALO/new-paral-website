@@ -9,34 +9,33 @@ const HeroBlogItem = ({ blog }: { blog: Blog }) => {
   const { _id, mainImage, title, metadata } = blog;
 
   return (
-    <div className="group relative flex rounded-lg">
-      <motion.div
-        whileInView="visible"
-        whileTap={{ 
-          scale: 0.98,
-          transition: { duration: 0.1 }
-        }}
-        transition={{ 
-          duration: 0.6
-        }}
-        viewport={{ once: true }}
-        className="animate_top bg-gray-100 rounded p-4 pb-9 shadow-solid-8 dark:bg-slate-900 cursor-pointer 
-                   overflow-hidden transition-all"
-      >
-        
-        <Link href={`/blog/blog-details/${_id}`} className="relative block aspect-[16/9]">
-          <Image src={getAssetPath(mainImage)} alt={title} fill className="rounded-md object-cover" />
-        </Link>
+    <div className="group w-full relative max-w-[45rem] min-w-[300px] flex-1 basis-80 rounded-lg">
+      <Link href={`/blog/blog-details/${_id}`}>
+        <motion.div
+          whileInView="visible"
+          whileTap={{ 
+            scale: 0.98,
+            transition: { duration: 0.1 }
+          }}
+          transition={{ 
+            duration: 0.6
+          }}
+          viewport={{ once: true }}
+          className="animate_top bg-gray-100 rounded p-4 pb-9 shadow-solid-8 dark:bg-slate-900 cursor-pointer 
+                     overflow-hidden transition-all h-full"
+          >
+          <div className="relative block aspect-[16/9]">
+            <Image src={getAssetPath(mainImage)} alt={title} fill className="rounded-md object-cover" />
+          </div>
 
-        <div className="px-4">
-          <h3 className="mb-3.5 mt-7.5 line-clamp-2 inline-block text-2xl font-semibold text-black duration-300 dark:text-white">
-            <Link href={`/blog/blog-details/${_id}`}>
-              {title}
-            </Link>
-          </h3>
-          <p className="line-clamp-4 text-lg">{metadata}</p>
-        </div>
-      </motion.div>
+          <div className="px-4">
+            <h3 className="mb-3.5 mt-7.5 line-clamp-2 inline-block text-2xl font-semibold text-black duration-300 dark:text-white">
+                {title}
+            </h3>
+            <p className="line-clamp-4 text-lg">{metadata}</p>
+          </div>
+        </motion.div>
+      </Link>
       
       <div className="absolute -inset-0 pointer-events-none group-active:scale-98">
         {/* Bottom border */}
