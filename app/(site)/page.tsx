@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
+import TeamSection from "@/components/Team";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function Home() {
 {/*       <FunFact /> */}
 {/*       <Integration /> */}
       <Testimonial />
+{/*  WIP:  <TeamSection /> */}
 {/*       <Pricing /> */}
       <Contact />
       
