@@ -15,11 +15,13 @@ import TeamSection from "@/components/Team";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Paral Dynamic",
-  description: "Transforming and helping businesses through intelligent software solutions...",
+  title: "Paral Dynamic | Eksperter på AI, digitalisering og programvareutvikling",
+  description: "Paral Dynamic utvikler løsninger spesialtilpasset din virksomhet for å optimalisere arbeidsprosesser, øke effektiviteten og nå dine mål. Vi er her for å bygge programvaren som gjør en forskjell for deg!",
+  icons: {
+    icon: "/images/favicon.ico",
+  },
+};
 
-
-}
 
 export default function Home() {
   return (

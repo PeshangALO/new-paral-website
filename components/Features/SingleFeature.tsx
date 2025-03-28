@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { getAssetPath } from "@/utils/assets";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, description } = feature;
+  const { icon, title, information } = feature;
 
   return (
     <>
@@ -33,7 +33,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <h3 className="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
           {title}
         </h3>
-        <p>{description}</p>
+        <p>{information}</p>
       </motion.div>
     </>
   );
