@@ -5,10 +5,10 @@ import SectionHeader from "@/components/Common/SectionHeader";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page - Solid SaaS Boilerplate",
+  title: "Paral Dynamic blog side!",
 
   // other metadata
-  description: "This is Blog page for Solid Pro"
+  description: "Les våre nye blog innlegg for informasjon rundt alt av teknologi!"
 };
 
 const BlogPage = async () => {
