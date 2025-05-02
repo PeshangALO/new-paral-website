@@ -21,9 +21,9 @@ const menuData: Menu[] = [
   }, */
 /*   {
     id: 2.3,
-    title: "Docs",
+    title: "Om oss",
     newTab: false,
-    path: "/docs",
+    path: "/om-oss",
   }, */
 /*   {
     id: 3,
