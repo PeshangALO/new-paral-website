@@ -1,4 +1,7 @@
+
 import Image from "next/image";
+
+import { motion } from "framer-motion";
 import { Metadata } from "next";
 import { getAssetPath } from "@/utils/assets"; // Optional: if you have team images or assets here
 import SectionHeader from "@/components/Common/SectionHeader";
@@ -7,6 +10,9 @@ import SingleTeamMember from "@/components/Team/singleTeamMember";
 import TeamMembers from "@/components/Team/teamData";
 import TeamSection from "@/components/Team";
 
+import ValuesSection from "@/components/values";
+import HistorySection from "./historie";
+
 export const metadata: Metadata = {
     title: "Paral Dynamic | Om Oss",
     description: "Lær mer om teamet bak Paral Dynamic",
@@ -14,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function OmOssPage() {
     return (
-        <>
+        <section className="flex flex-col gap-20">
         <div className="mt-[10rem] mx-3 pb-10">
           <SectionHeader
                     headerInfo={{
@@ -25,29 +31,14 @@ export default function OmOssPage() {
                     }}
                   />        
         </div>
-      
-<div>
-                    <h2 className="text-3xl font-semibold text-black dark:text-white mt-6">
-                        Historien vår
-                    </h2>
-                    <p className="mt-4 text-gray-300">
-                        Paral ble startet med et ønske om å gjøre teknologi mer tiligjengelig og meningsfull. 
-                    </p>
-                    <p className="mt-4 text-gray-300">
-                        Vi bygger digitale løsniner som gjør hverdagen enklere - i helse, industri, energi og mer. 
-                    </p>
-                    <h3 className="text-2xl font-semibold text-black dark:text-white mt-8">
-                        Visjon og verdier
-                    </h3>
-                    <p className="mt-2 text-gray-600">
-                        Å skape verdi gjennom innovasjon og engasjement ...
-                    </p>
+        <div className="flex justify-center flex-col items-center gap-20">
 
-                    <h3 className="text-2xl font-semibold text-black dark:text-white mt-8">
-                        Team og kompetanse
-                    </h3>
-                    <TeamSection></TeamSection>
-</div>
-</>
+                    <HistorySection/>
+
+                    <ValuesSection/>
+
+                    <TeamSection/>
+            </div>
+</section>
     );
 }

@@ -5,10 +5,12 @@ import { InlineWidget } from "react-calendly";
 
 const CalendlyEmbed = () => {
   return (
-    <div style={{ height: "700px" }}>
+    <div>
       <InlineWidget url="https://calendly.com/peshang-paral/30min" />
     </div>
   );
 };
 
+
+  
 export default CalendlyEmbed;

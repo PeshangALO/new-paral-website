@@ -23,13 +23,16 @@ const Hero = () => {
               <h1 className="font-bold tracking-tighter text-4xl sm:text-6xl lg:justify-self-start justify-self-center :text-6xl/none dark:text-black text-white">
             <AnimatedBox>Digitale løsninger for ekte problemer</AnimatedBox>
               </h1>
-              <p className="dark:text-white text-black py-6">
+              <p className="dark:text-white text-black py-6 text-xl">
               {/* Hos Paral Dynamic utvikler vi løsninger som er spesialtilpasset din virksomhet, slik at du får akkurat det du trenger for å optimalisere arbeidsprosesser, 
               øke effektiviteten og nå dine mål. Vi er her for å bygge programvaren som gjør en forskjell for deg. */}
                Vi hjelper selskaper å forenkle komplekse prosesser med skreddersydd teknologi. Fra idé til ferdig produkt – med samarbeid i sentrum
               </p>
             <button
-            type="submit"
+            type="button"
+            onClick={() => {
+              document.getElementById("calendly")?.scrollIntoView({ behavior: "instant" });
+            }}
             aria-label="book a meeting"
             className="flex gap-3 w-45 items-center place-self-end bg-white border-2 border-black rounded-lg px-6 py-3 text-black transition-all duration-[200ms] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_gray] active:translate-x-[0px] active:translate-y-[0px] active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed dark:bg-gray-800 dark:text-white dark:border-white"
             > Book et møte 

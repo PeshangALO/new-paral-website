@@ -16,7 +16,7 @@ export default function TeamSection() {
             headerInfo={{
               title: "MØT VÅRT TEAM",
               subtitle: "Møt vårt team",
-              description: "Vi er en gjeng med hardtarbeidende teknologi entusiaster, som er ute etter å utvikle et godt produkt for deg!"
+              description: "Vi er et tverrfaglig team, bestående av utviklere, designere og tekniske rådgivere."
             }}
           />
         </div>

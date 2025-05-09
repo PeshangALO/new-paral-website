@@ -11,7 +11,7 @@ export const AnimatedBox: React.FC<AnimatedBoxProps> = ({
   children, 
   fillColor = '#F7F7F2',
   darkFillColor = '#1D1D1D',
-  transitionDuration = 700 
+  transitionDuration = 1000 
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMounted, setIsMounted] = useState(false);

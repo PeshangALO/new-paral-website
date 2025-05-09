@@ -40,7 +40,9 @@ export default function Home() {
       {/*  WIP:  <TeamSection /> */}
       {/*       <Pricing /> */}
       <Contact />
+      <div id="calendly">
       <CalendlyEmbed />
+      </div>
       {/*       <Blog /> */}
     </main>
   );
