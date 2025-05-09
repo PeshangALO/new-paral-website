@@ -1,6 +1,6 @@
 export type WorkMethod = {
   id: number;
-  icon: string;
+  icon?: string;
   workMethodTitle: string;
   information: string;
 };

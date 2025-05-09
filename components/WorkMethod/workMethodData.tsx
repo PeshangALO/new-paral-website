@@ -1,6 +1,6 @@
-import { workMethod } from "@/types/workMethod"
+import { WorkMethod } from "@/types/workMethod"
 
-const featuresData: workMethod[] = [
+const featuresData: WorkMethod[] = [
   {
     id: 1,
     workMethodTitle: "Agile (Scrum/Kanban)",
