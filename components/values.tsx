@@ -5,7 +5,7 @@ import { Target, Eye, HeartHandshake } from "lucide-react";
 import SectionHeader from "@/components/Common/SectionHeader";
 
 export default function ValuesSection() {
-  // Core values list
+
   const values = [
     "• Samarbeid og tillit",
     "• Åpenhet og ærlighet",
@@ -20,19 +20,19 @@ export default function ValuesSection() {
     "• Teknologisk dyktighet",
     "• Jobbe med kunder fra idé og prototype til ferdig løsning"
   ]
-  // Card animations
+
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.3 }
     },
     hover: {
       scale: 1.02,
       boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-      transition: { duration: 0.2 }
+      transition: { duration: 0.3 }
     }
   };
 
@@ -77,7 +77,7 @@ export default function ValuesSection() {
   return (
     <section
       id="values"
-      className="flex-col relative py-24 px-6 sm:px-12 lg:px-24 overflow-hidden"
+      className="flex-col relative py-6 px-6 sm:px-12 lg:px-24 overflow-hidden"
     >
     <div className="flex flex-col">
       <div className="mb-4">

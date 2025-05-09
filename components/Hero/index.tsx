@@ -32,7 +32,7 @@ const Hero = () => {
               type="button"
               aria-label="book a meeting"
               className="flex gap-3 w-45 items-center place-self-end bg-white border-2 border-black rounded-lg px-6 py-3 text-black transition-all duration-[200ms] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_gray] active:translate-x-[0px] active:translate-y-[0px] active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed dark:bg-gray-800 dark:text-white dark:border-white"
-              onClick={() => document.getElementById("calendly-section")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.getElementById("calendly")?.scrollIntoView({ behavior: "smooth", block:"nearest" })}
             >
               Book et møte
               <svg

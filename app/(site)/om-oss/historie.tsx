@@ -19,10 +19,10 @@ export default function HistorySection() {
 
 
 
-      <div className="flex flex-col items-start gap-1">
+      <div className="flex flex-col items-center md:items-start gap-1">
         <div className="flex items-center gap-2">
             <History className="w-8 h-8 text-black dark:text-white" />
-            <h2 className="text-3xl md:text-2xl font-normal text-black dark:text-white">
+            <h2 className="text-2xl font-normal text-black dark:text-white">
               Historien vår
             </h2>
         </div>
@@ -33,7 +33,7 @@ export default function HistorySection() {
         transition={{ delay: 0.2, duration: 0.5 }}
         viewport={{ once: true }}
         >
-          <AnimatedBox><span className="font-bold">Paral Dynamic</span></AnimatedBox> ble startet med et ønske om å gjøre teknologi mer tilgjengelig og meningsfull.
+          <AnimatedBox><span className="font-bold">Paral Dynamic</span></AnimatedBox> ble startet med et ønske om å gjøre teknologi mer <span>tilgjengelig</span> og <span>meningsfull.</span>
         
       </motion.p>
           </div>
@@ -42,19 +42,18 @@ export default function HistorySection() {
         className="mt-4 text-black dark:text-gray-300 text-lg max-w-3xl"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.5 }}
         viewport={{ once: true }}
       >
         Vi bygger digitale løsninger som gjør hverdagen enklere – i helse, industri, energi og mer.
       </motion.p>
       <button
             type="button"
-/*             onClick={() => {
-              document.getElementById("calendly")?.scrollIntoView({ behavior: "instant" });
-            }} */
+            onClick={() => {
+              document.getElementById("kontakt-oss")?.scrollIntoView({ behavior: "smooth" });
+            }}
             aria-label="discover more paral dynamic projects"
-            className="flex gap-3 w-50 items-center place-self-end bg-white border-2 border-black rounded-lg px-6 py-3 text-black transition-all duration-[200ms] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_gray] active:translate-x-[0px] active:translate-y-[0px] active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed dark:bg-gray-800 dark:text-white dark:border-white"
-            > Utforsk prosjekt
+            className="flex gap-3 w-auto items-center place-self-end bg-white border-2 border-black rounded-lg px-6 py-3 text-black transition-all duration-[200ms] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_gray] active:translate-x-[0px] active:translate-y-[0px] active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed dark:bg-gray-800 dark:text-white dark:border-white"
+            > Ta kontakt
             <svg
               className="fill-current"
               width="14"

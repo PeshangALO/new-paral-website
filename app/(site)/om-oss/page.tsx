@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import { Metadata } from "next";
 import { getAssetPath } from "@/utils/assets"; // Optional: if you have team images or assets here
 import SectionHeader from "@/components/Common/SectionHeader";
+import Contact from "@/components/Contact";
 
-import SingleTeamMember from "@/components/Team/singleTeamMember";
-import TeamMembers from "@/components/Team/teamData";
 import TeamSection from "@/components/Team";
 
 import ValuesSection from "@/components/values";
 import HistorySection from "./historie";
+import { HowWeWork } from "@/components/WorkMethod/HowWeWork";
 
 export const metadata: Metadata = {
     title: "Paral Dynamic | Om Oss",
@@ -36,8 +36,9 @@ export default function OmOssPage() {
                     <HistorySection/>
 
                     <ValuesSection/>
-
                     <TeamSection/>
+                    <HowWeWork/>
+                    <Contact />
             </div>
 </section>
     );
