@@ -1,16 +1,17 @@
-// filepath: /Users/peshangalo/new-paral-website/app/(site)/components/CalendlyEmbed.tsx
 "use client";
-import React from "react";
-import { InlineWidget } from "react-calendly";
+import React, { useEffect } from "react";
 
 const CalendlyEmbed = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://asset-tidycal.b-cdn.net/js/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
-    <div>
-      <InlineWidget url="https://calendly.com/peshang-paral/30min" />
-    </div>
+    <div className="tidycal-embed" data-path="gunnar2/30-minute-meeting"></div>
   );
 };
 
-
-  
 export default CalendlyEmbed;
