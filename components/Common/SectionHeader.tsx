@@ -11,9 +11,6 @@ type HeaderInfo = {
 const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
   const { title, subtitle, description, fontSize } = headerInfo;
 
-
-
-
   return (
     <>
       {/* <!-- Section Title Start --> */}
@@ -30,9 +27,8 @@ const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
           },
         }}
         initial="hidden"
-        whileInView="visible"
+        animate="visible"
         transition={{ duration: 1, delay: 0.1 }}
-        viewport={{ once: true }}
         className="animate_top mx-auto text-center"
       >
         <h2 className={`mx-auto mb-4 ${fontSize || "text-3xl"} font-bold text-black dark:text-white md:text-sectiontitle3`}>
