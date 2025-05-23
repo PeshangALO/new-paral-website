@@ -23,7 +23,7 @@ function Portfolio() {
             />
         </div>
         <section className="justify-center">
-        <div className="flex flex-col max-w-6xl mx-auto m-2  gap-25">
+        <div className="flex flex-col max-w-6xl mx-auto m-2 gap-25">
             {projectPreviewData.map((project, index) => (
                 <div
                  key={project.id}

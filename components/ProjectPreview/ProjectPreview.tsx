@@ -46,29 +46,29 @@ export default function ProjectPreview({
     };
 
   return (
-    <div className="flex flex-col md:flex-row w-full max-w-6xl mx-auto px-4">
+    <div className="flex flex-col-reverse lg:flex-row px-4">
       {/* For odd items (isEven=false): Image stacked on mobile, side-by-side on desktop */}
       {!isEven ? (
         <>
           <motion.div 
-            className="overflow-hidden grid bg-white shadow-xl rounded-2xl p-5 md:p-10 mb-8 md:mb-0 w-full md:w-2/5"
+            className="grid p-5 md:p-10 mb-8 md:mb-0 w-full "
             ref={ref}
             variants={leftItemVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-<div className="place-self-center md:w-96">
+
   <Image
     src={projectPreviewInfo.src}
     alt={`Preview image of paral project ${projectPreviewInfo.title}`}
     width={1200}
     height={1200}
-    className="transform scale-100 md:scale-150 md:translate-x-1/4 lg:translate-x-1/2 w-full md:w-auto"
-  />
-</div>
+    className="place-self-center lg:scale-125"
+    />
+
           </motion.div>
           
-          <div className="md:ml-8 flex flex-col gap-4 w-full md:w-3/5">
+          <div className="md:ml-8 flex flex-col gap-7 w-full">
             <div className="place-self-start">
               <Image
                 src={projectPreviewInfo.companyLogo}
@@ -98,8 +98,8 @@ export default function ProjectPreview({
         </>
       ) : (
         // For even items - reverse order on mobile
-        <div className="flex flex-col-reverse md:flex-row w-full">            
-          <div className="md:mr-8 flex flex-col gap-4 mt-8 md:mt-0 w-full md:w-3/5">
+        <div className="flex flex-col lg:flex-row w-full gap-7">            
+          <div className="md:ml-8 flex flex-col gap-4 w-full">
         <Image
                 src={projectPreviewInfo.companyLogo}
                 alt={`${projectPreviewInfo.title} Logo`}
@@ -128,7 +128,7 @@ export default function ProjectPreview({
           </div>
           
           <motion.div 
-            className="overflow-hidden grid bg-white shadow-xl rounded-2xl p-5 md:p-5 w-full md:w-2/5"
+            className="grid p-5 md:p-5"
             ref={ref}
             variants={rightItemVariants}
             initial="hidden"
@@ -142,15 +142,13 @@ export default function ProjectPreview({
                 height={projectPreviewInfo.height ?? 50}
               />
             </div> */}
-<div className="place-self-center md:w-96">
   <Image
     src={projectPreviewInfo.src}
     alt={`Preview image of paral project ${projectPreviewInfo.title}`}
     width={1200}
     height={1200}
-    className="transform scale-100 md:scale-150 md:-translate-x-1/2 w-full md:w-auto"
+    className="place-self-center lg:scale-125"
   />
-</div>
           </motion.div>
         </div>
       )}
