@@ -11,7 +11,7 @@ const brandData: Brand[] = [
   {
     id: 0.6,
     name: "GADR",
-    href: "https://gadr.no/lander",
+    href: "https://gadr.no/",
     image: "/images/brand/GADR-coloured.svg",
     imageLight: "/images/brand/GADR-coloured-dark.svg",
   },

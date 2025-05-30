@@ -32,9 +32,7 @@ export default function OmOssPage() {
                   />        
         </div>
         <div className="flex justify-center flex-col items-center gap-20">
-
                     <HistorySection/>
-
                     <ValuesSection/>
                     <TeamSection/>
                     <HowWeWork/>

@@ -75,6 +75,12 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/kontakt-oss",
   },
+    {
+    id: 5,
+    title: "Portefølje",
+    newTab: false,
+    path: "/portefolje",
+  },
 ];
 
 export default menuData;
