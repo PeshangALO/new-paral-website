@@ -11,12 +11,15 @@ export default function NeoButton({text, onClick, withIcon = false}: ButtonProps
         <motion.button
             type="button"
             aria-label="book a meeting"
-            className="relative flex gap-3 w-auto items-center border-2 border-black rounded-lg px-6 py-3 text-black 
+            className="relative flex gap-3 w-auto items-center border-2 border-black rounded-lg px-6 py-3 text-black
             overflow-hidden
+            dark:text-white
+            bg-white dark:bg-black
+            dark:border-white
             transition-all duration-300 
             hover:translate-x-[-4px] hover:translate-y-[-4px] 
             hover:rounded-md hover:shadow-[4px_4px_0px_gray] 
-            hover:text-white 
+            hover:text-white  dark:hover:text-black
             active:translate-x-[0px] active:translate-y-[0px] active:shadow-none 
             disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={onClick}
@@ -24,7 +27,7 @@ export default function NeoButton({text, onClick, withIcon = false}: ButtonProps
             initial="initial"
         >
             <motion.span 
-                className="absolute inset-0 bg-black -z-10"
+                className="absolute inset-0 bg-black dark:bg-white -z-10"
                 variants={{
                     initial: { width: 0 },
                     hover: { 
