@@ -75,12 +75,12 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/kontakt-oss",
   },
-    {
+/*     { uncomment to add
     id: 5,
     title: "Portefølje",
     newTab: false,
     path: "/portefolje",
-  },
+  }, */
 ];
 
 export default menuData;
