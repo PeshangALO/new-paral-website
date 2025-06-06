@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { getAssetPath } from "@/utils/assets";
+import NeoButton from "../NeoButton";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -14,6 +16,7 @@ const Header = () => {
   const [stickyMenu, setStickyMenu] = useState(false);
 
   const pathUrl = usePathname();
+  const router = useRouter();
 
   // Sticky menu
   const handleStickyMenu = () => {
@@ -145,9 +148,14 @@ const Header = () => {
             </ul>
           </nav>
 
-{          <div className="mt-7 flex items-center gap-6 xl:mt-0">
+          {<div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
-
+            <NeoButton
+              text="Book et møte"
+              onClick={() => router.push('/book-mote')}
+              withIcon={true}
+              size="sm"
+            />
           </div>}
         </div>
       </div>
