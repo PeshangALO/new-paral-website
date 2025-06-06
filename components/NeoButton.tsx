@@ -4,14 +4,21 @@ interface ButtonProps {
     text: string
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     withIcon: boolean
+    size?: 'sm' | 'md' | 'lg'
 }
 
-export default function NeoButton({text, onClick, withIcon = false}: ButtonProps) {
+export default function NeoButton({ text, onClick, withIcon = false, size = 'md' }: ButtonProps) {
+    const sizeClasses = {
+        sm: 'px-4 py-2 text-sm',
+        md: 'px-6 py-3',
+        lg: 'px-8 py-4 text-lg'
+    };
+
     return (
         <motion.button
             type="button"
             aria-label="book a meeting"
-            className="relative flex gap-3 w-auto items-center border-2 border-black rounded-lg px-6 py-3 text-black
+            className={`relative flex gap-3 w-auto items-center border-2 border-black rounded-lg ${sizeClasses[size]} text-black
             overflow-hidden
             dark:text-white
             bg-white dark:bg-black
@@ -21,24 +28,24 @@ export default function NeoButton({text, onClick, withIcon = false}: ButtonProps
             hover:rounded-md hover:shadow-[4px_4px_0px_gray] 
             hover:text-white  dark:hover:text-black
             active:translate-x-[0px] active:translate-y-[0px] active:shadow-none 
-            disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled:opacity-50 disabled:cursor-not-allowed`}
             onClick={onClick}
             whileHover="hover"
             initial="initial"
         >
-            <motion.span 
+            <motion.span
                 className="absolute inset-0 bg-black dark:bg-white -z-10"
                 variants={{
                     initial: { width: 0 },
-                    hover: { 
+                    hover: {
                         width: "100%",
                         transition: { duration: 0.3, ease: "easeInOut" }
                     }
                 }}
             />
-            
+
             <span className="relative z-10">{text}</span>
-            
+
             {withIcon && (
                 <svg
                     className="fill-current relative z-10"
