@@ -152,7 +152,7 @@ const Header = () => {
             <ThemeToggler />
             <NeoButton
               text="Book et møte"
-              onClick={() => router.push('/book-mote')}
+              onClick={() => window.location.href = '/book-mote'}
               withIcon={true}
               size="sm"
             />
