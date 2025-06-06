@@ -50,7 +50,7 @@ export const projectPreviewData: ProjectPreviewProps[] = [
         ],
         dateInitiated: 2024,
         src: "/images/projectPreview/CoreCapacity_preview.png",
-        companyLogo: "/images/brand/CoreCapacity_logo.png"
+        companyLogo: "/images/brand/Corecapacity_logo.png"
         
     }    
 ]

@@ -76,9 +76,7 @@ export default function ProjectPreview({
                 width={projectPreviewInfo.width ?? 80}
                 height={projectPreviewInfo.height ?? 80}
               />
-              {projectPreviewInfo.id === 3 && (
-              <h2 className="place-self-center text-2xl text-green-700 tracking-tighter">CoreCapacity</h2>
-              )}
+
               </div>
 
             {projectPreviewInfo.description3 && (
@@ -89,7 +87,7 @@ export default function ProjectPreview({
             </div>
             {projectPreviewInfo.id === 3 && (
                 <div> 
-                  <h4 className="text-lg">For mer informasjon, kontakt Tor Einar: <span className="font-bold text-black">tei-san@online.no</span></h4>
+                  <h4 className="text-md">For mer informasjon, kontakt Tor Einar: <span className="font-bold text-black">kontakt@corecapacity.com</span></h4>
                 </div>
               )}
             <div>   

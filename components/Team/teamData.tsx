@@ -5,6 +5,7 @@ import Peshang from "@/public/images/team-images/Peshang.png";
 import Rashed from "@/public/images/team-images/Rashed.png";
 import Rasmus from "@/public/images/team-images/Rasmus.png";
 import Tim from "@/public/images/team-images/Tim.png";
+import Gunnar from "@/public/images/team-images/Gunnar1.png";
 
 
 
@@ -72,7 +73,7 @@ const teamMembers: TeamMember[] = [
         linkedin: "https://linkedin.com",
       },
     },
-        {
+/*         {
       id: 8, 
       name: "Lucas T. Hagfoss",
       role: "Frontend Utvikler",
@@ -81,17 +82,17 @@ const teamMembers: TeamMember[] = [
       social: {
         linkedin: "https://linkedin.com",
       },
-    },
-/*     {
+    }, */
+    {
       id: 8, 
       name: "Gunnar Skare",
       role: "Salg & Markedsføring",
       bio: "En sabla god salgsmann.",
-      image: "",
+      image: Gunnar,
       social: {
         linkedin: "https://linkedin.com",
       },
-    }, */
+    },
   ]
   
 
