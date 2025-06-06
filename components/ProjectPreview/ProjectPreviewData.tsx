@@ -37,7 +37,7 @@ export const projectPreviewData: ProjectPreviewProps[] = [
         {
         id: 3,
         title: "Core Capacity",
-        width: 50,
+        width: 100,
         height: 100,
         description1: "CoreCapacity AS jobber med prestasjonsfremmende trening for idrettsutøvere og ansatte, med fokus på kjernemuskulatur og kjernekapasitet.",
         description3: "Kommer snart!",
