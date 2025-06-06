@@ -6,10 +6,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const Lines = () => {
   const { scrollY } = useScroll();
-  
-  // Transform scroll values for different effects
-  const skewX = useTransform(scrollY, [0, 1250], [-15, 0]);
-  const translateX = useTransform(scrollY, [0, 1000], [0, -1200]);
+    // Transform scroll values for different effects
+  const skewX = useTransform(scrollY, [0, 800], [-15, 0]);
+  const translateX = useTransform(scrollY, [0, 600], [0, -1200]);
 
   const rightSlideX = useTransform(scrollY, [0, 2500], [0, 1000]);
 const leftSlideX = useTransform(scrollY, [0, 2500], [0, -1000]);
@@ -41,7 +40,7 @@ const imageSlideX = useTransform(scrollY, [0, 200], [0,0]);
       
       {/* Animated diagonal dividing line */}
       <motion.div 
-        className="absolute h-full w-[2px] dark:bg-gray-400 bg-black"
+        className="absolute h-full w-[3px] dark:bg-gray-600 bg-white"
         style={{
           left: '85%',
           skewX,

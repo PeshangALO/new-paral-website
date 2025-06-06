@@ -1,4 +1,14 @@
-import Alex_Paral from "@/public/images/team-images/Alex_Paral.png";
+import Alex from "@/public/images/team-images/Alex.png";
+import Eline from "@/public/images/team-images/Eline.png";
+import Lucas from "@/public/images/team-images/Lucas.png";
+import Peshang from "@/public/images/team-images/Peshang.png";
+import Rashed from "@/public/images/team-images/Rashed.png";
+import Rasmus from "@/public/images/team-images/Rasmus.png";
+import Tim from "@/public/images/team-images/Tim.png";
+
+
+
+
 import { TeamMember } from "@/types/teamMember";
 
 const teamMembers: TeamMember[] = [
@@ -7,7 +17,7 @@ const teamMembers: TeamMember[] = [
       name: "Peshang Alo",
       role: "AI Utvikler & CTO",
       bio: "Peshang har bakgrunn med utvikling av AI. Skriver litt ekstra for å teste skalering når det er mye tekst.",
-      image: "",
+      image: Peshang,
       social: {
         linkedin: "https://linkedin.com",
       },
@@ -17,7 +27,7 @@ const teamMembers: TeamMember[] = [
       name: "Rune Alexander Laursen",
       role: "AI Utvikler & CEO",
       bio: "Rune Alexander elsker AI.",
-      image: Alex_Paral,
+      image: Alex,
       social: {
         linkedin: "https://linkedin.com",
       },
@@ -27,7 +37,7 @@ const teamMembers: TeamMember[] = [
       name: "Rasmus Nicolay Pripp",
       role: "CFO",
       bio: "Holder pengene i sjakk.",
-      image: "",
+      image: Rasmus,
       social: {
         linkedin: "https://linkedin.com",
       },
@@ -37,17 +47,7 @@ const teamMembers: TeamMember[] = [
       name: "Rashed Rajab",
       role: "Utivkler & Prosjekt Manager",
       bio: "Han kan programmere.",
-      image: "",
-      social: {
-        linkedin: "https://linkedin.com",
-      },
-    },
-    {
-      id: 5, 
-      name: "Randa Ramzi Mustafa",
-      role: "Utvikler & UX Designer",
-      bio: "Randa lager designs og utvikler ting.",
-      image: "",
+      image: Rashed,
       social: {
         linkedin: "https://linkedin.com",
       },
@@ -57,7 +57,7 @@ const teamMembers: TeamMember[] = [
       name: "Eline Grønlid",
       role: "Markedsføring",
       bio: "Eline markedsfører oss på sosiale medier. Skriver en hel masse for å se hvordan høyden forandrer seg hvis det er flere linjer med tekst.",
-      image: "",
+      image: Eline,
       social: {
         linkedin: "https://linkedin.com",
       },
@@ -67,12 +67,22 @@ const teamMembers: TeamMember[] = [
       name: "Tim-Eric Reichert",
       role: "UX Designer",
       bio: "Kan lage noen designs her og der.",
-      image: "",
+      image: Tim,
       social: {
         linkedin: "https://linkedin.com",
       },
     },
-    {
+        {
+      id: 8, 
+      name: "Lucas T. Hagfoss",
+      role: "Frontend Utvikler",
+      bio: "En sabla god salgsmann.",
+      image: Lucas,
+      social: {
+        linkedin: "https://linkedin.com",
+      },
+    },
+/*     {
       id: 8, 
       name: "Gunnar Skare",
       role: "Salg & Markedsføring",
@@ -81,7 +91,7 @@ const teamMembers: TeamMember[] = [
       social: {
         linkedin: "https://linkedin.com",
       },
-    },
+    }, */
   ]
   
 

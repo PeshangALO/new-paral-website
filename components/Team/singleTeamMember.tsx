@@ -16,16 +16,14 @@ const SingleTeamMember = ({ teamMember }: { teamMember: TeamMember }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       viewport={{ once: true }}
-      className="border dark:border-strokedark dark:bg-blacksection bg-white rounded-xl shadow-md w-full max-w-xs overflow-hidden"
+      className="flex shadow-md rounded overflow-hidden"
     >
-      <div className="w-full relative overflow-hidden h-96">
+      <div className="relative h-52 bg-gray-200 dark:bg-gray-700">
         {image ? (
           <Image
             src={image}
             alt={name}
-            width={384}
-            height={384}
-            className="object-cover"
+            className="object-fit"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-4xl font-semibold text-gray-500">
@@ -34,14 +32,14 @@ const SingleTeamMember = ({ teamMember }: { teamMember: TeamMember }) => {
         )}
       </div>
 
-      <div className="p-4">
-        <div className="flex justify-between items-center">
+      <div className="p-4 flex-1">
+        <div className="flex-col justify-between items-center h-full">
           <div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{name}</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">{role}</p>
           </div>
 
-          {social?.linkedin && (
+{/*           {social?.linkedin && (
             <Link
               href={social.linkedin}
               target="_blank"
@@ -51,7 +49,7 @@ const SingleTeamMember = ({ teamMember }: { teamMember: TeamMember }) => {
               <FaLinkedin className="text-xl" />
               <span className="sr-only">LinkedIn</span>
             </Link>
-          )}
+          )} */}
         </div>
       </div>
     </motion.div>

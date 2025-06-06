@@ -14,6 +14,10 @@ import Blog from "@/components/Blog";
 import TeamSection from "@/components/Team";
 import Testimonial from "@/components/Testimonial";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
+import Lines from "@/components/BackgroundEffect";
+
+import Brands2 from "@/components/Brands/brandV2";
+
 
 export const metadata: Metadata = {
   title: "Paral Dynamic | Eksperter på AI, digitalisering og programvareutvikling",
@@ -27,9 +31,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      <Lines/>
       <Hero />
       {/*       <CTA /> */}
       {/*       <FAQ /> */}
+{/*       <Brands2/> */}
       <Brands />
       <Feature />
       {/*       <About /> */}

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 function Portfolio() {
     return(
         <>
-        <div className="mt-[10rem] mx-3 pb-10">
+        <div className="pt-22 mx-3 pb-10">
             <SectionHeader 
                 headerInfo={{
                     title:"",

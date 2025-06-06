@@ -1,47 +1,41 @@
 import { Feature } from "@/types/feature";
+import { Smartphone, Bot, Users, PanelTop } from "lucide-react";
 
 const featuresData: Feature[] = [
   {
     id: 1,
     icon: "/images/icon/icon-06.svg",
-    title: "Kunstig Intelligens",
+    title: "KI / AI",
     information:
-      "Vi hjelper bedrifter med å utnytte kunstig intelligens (AI) på en praktisk og målrettet måte.",
-  },
-  {
-    id: 2,
-    icon: "/images/icon/icon-02.svg",
-    title: "Maskinlæring",
-    information:
-      " Med maskinlæring kan din bedrift få verdifull innsikt, forutse trender og ta bedre beslutninger basert på historiske mønstre.",
+      "Vi hjelper bedrifter med å utnytte kunstig intelligens (AI).",
+    lucideIcon: Bot
   },
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
     title: "App-utvikling",
     information:
-      "Fra idé til lansering sikrer vi at din app møter både brukernes behov og bedriftens mål.",
+      "Vi lager kundetilpassede apper og systemer for bedrifter.",
+    lucideIcon: Smartphone
   },
   {
     id: 4,
-    icon: "/images/icon/icon-01.svg",
-    title: "Big data/database",
-    information:
-      "Vi hjelper deg å håndtere og analysere store datamengder. Med optimaliserte databaseløsninger får du tilgang til verdifull informasjon og kan ta datadrevne beslutninger.",
-  },
-  {
-    id: 5,
     icon: "/images/icon/icon-04.svg",
     title: "IT-rådgiving",
     information:
-      "Vi gir veiledning for din digitale utvikling. Med bred erfaring hjelper vi deg å velge de beste IT-løsningene som støtter din virksomhets vekst og målsettinger.",
-  },  {
+      "Med bred erfaring hjelper vi deg å velge de beste IT-løsningene.",
+    lucideIcon: Users
+    },
+  
+  {
     id: 5,
     icon: "/images/icon/icon-05.svg",
     title: "Web-utvikling",
     information:
-      "Vi utvikler moderne og responsive nettsider tilpasset dine behov. Fra bedriftssider til komplekse web-applikasjoner leverer vi brukervennlige løsninger.",
-  }
+      "Moderne og responsive nettsider tilpasset dine behov.",
+    lucideIcon: PanelTop
+    },
+
 ];
 
 export default featuresData;

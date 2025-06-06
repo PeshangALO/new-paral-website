@@ -5,21 +5,30 @@ import { motion } from "framer-motion";
 import { getAssetPath } from "@/utils/assets";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, information } = feature;
+  const { icon, title, information, lucideIcon } = feature;
+  const LucideIcon = lucideIcon;
 
   return (
     <>
       <motion.div
-        className="animate_top h-full z-40 rounded-lg border border-white bg-black p-7.5 
-        shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection xl:p-12.5"
+        className="animate_top h-full z-40 rounded-lg border border-white p-7.5 
+        shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark xl:p-12.5 backdrop-blur-lg"
       >
-          <div className="relative flex h-16 w-16 items-center justify-center rounded-[4px] border-solid border-2 bg-black">
-            <Image src={getAssetPath(icon)} width={36} height={36} alt="title" />
+          <div className="flex items-center justify-center">
+           {/*  <Image src={getAssetPath(icon)} width={72} height={72} alt="title" /> */}
+               <div>
+      {LucideIcon && (
+        <LucideIcon className="w-16 h-16 dark:text-white text-black" />
+      )}
+      {/* Rest of your component */}
+    </div>
           </div>
-          <h3 className=" mb-5 mt-7.5 text-xl font-semibold text-white xl:text-itemtitle">
+          <h3 className=" mb-5 mt-7.5 text-center text-xl font-semibold  text-black dark:text-white xl:text-itemtitle">
             {title}
           </h3>
-        <p className="text-white">{information}</p>
+
+        <p className="text-black text-center dark:text-white">{information}</p>
+
       </motion.div>
     </>
   );

@@ -3,4 +3,5 @@ export type Feature = {
   icon: string;
   title: string;
   information: string;
+  lucideIcon?: React.ComponentType<any>;
 };

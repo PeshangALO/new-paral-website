@@ -19,12 +19,12 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/blog",
   }, */
-/*   {
+  {
     id: 2.3,
     title: "Om oss",
     newTab: false,
     path: "/om-oss",
-  }, */
+  },
 /*   {
     id: 3,
     title: "Pages",
@@ -68,19 +68,18 @@ const menuData: Menu[] = [
       },
     ], */
  // },
-
+ { 
+ id: 4,
+ title: "Prosjekter",
+ newTab: false,
+ path: "/portefolje",
+},
   {
-    id: 4,
+    id: 5,
     title: "Kontakt oss",
     newTab: false,
     path: "/kontakt-oss",
   },
-/*     { uncomment to add
-    id: 5,
-    title: "Portefølje",
-    newTab: false,
-    path: "/portefolje",
-  }, */
 ];
 
 export default menuData;
