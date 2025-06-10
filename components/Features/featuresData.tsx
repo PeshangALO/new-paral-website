@@ -17,16 +17,7 @@ const featuresData: Feature[] = [
     information:
       "Vi lager kundetilpassede apper og systemer for bedrifter.",
     lucideIcon: Smartphone
-  },
-  {
-    id: 4,
-    icon: "/images/icon/icon-04.svg",
-    title: "IT-rådgiving",
-    information:
-      "Med bred erfaring hjelper vi deg å velge de beste IT-løsningene.",
-    lucideIcon: Users
-    },
-  
+  },  
   {
     id: 5,
     icon: "/images/icon/icon-05.svg",
