@@ -19,7 +19,7 @@ const Feature = () => {
           
           {/* Right Side: Features Grid */}
           <div className="flex-1">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
               {featuresData.map((feature, key) => (
                 <div key={key} className="w-full">
                   <SingleFeature feature={feature} />
