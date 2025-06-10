@@ -12,7 +12,7 @@ const Feature = () => {
           {/* Left Side: Title */}
           <div className="flex flex-col">
             <h2 className="text-6xl font-bold tracking-tighter text-black dark:text-white text-center">
-              Våre tjenester
+              Hva vi kan utvikle for deg
             </h2>
 
           </div>

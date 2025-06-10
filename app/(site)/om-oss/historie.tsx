@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { History } from 'lucide-react';
-import SectionHeader from "@/components/Common/SectionHeader";
 import AnimatedBox from '@/components/AnimatedBox/AnimatedBox';
 
 

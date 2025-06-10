@@ -37,7 +37,7 @@ export default function Home() {
       {/*       <FAQ /> */}
 {/*       <Brands2/> */}
       <Feature />
-      <Brands />
+      {/* <Brands /> */}
       {/*       <About /> */}
       {/*       <FeaturesTab /> */}
       {/*       <FunFact /> */}

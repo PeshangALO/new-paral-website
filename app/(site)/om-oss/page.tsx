@@ -35,7 +35,6 @@ export default function OmOssPage() {
                     <HistorySection/>
                     <ValuesSection/>
                     <TeamSection/>
-                    <HowWeWork/>
                     <Contact />
             </div>
 </section>

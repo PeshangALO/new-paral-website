@@ -1,5 +1,5 @@
 import { Feature } from "@/types/feature";
-import { Smartphone, Bot, Users, PanelTop } from "lucide-react";
+import { Smartphone, Bot, Users, MonitorCog } from "lucide-react";
 
 const featuresData: Feature[] = [
   {
@@ -7,24 +7,24 @@ const featuresData: Feature[] = [
     icon: "/images/icon/icon-06.svg",
     title: "KI / AI",
     information:
-      "Vi hjelper bedrifter med å utnytte kunstig intelligens (AI).",
+      "Fra data til verdi: Skreddersydde KI-algoritmer som bruker din data til å skape målbar forretningsvekst.",
     lucideIcon: Bot
   },
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
-    title: "App-utvikling",
+    title: "Apputvikling",
     information:
-      "Vi lager kundetilpassede apper og systemer for bedrifter.",
+      "Skap vekst med en app som løser dine behov, fra konsept til lansert løsning med fokus på brukervennlighet.",
     lucideIcon: Smartphone
   },  
   {
     id: 5,
     icon: "/images/icon/icon-05.svg",
-    title: "Web-utvikling",
+    title: "Systemutvikling",
     information:
-      "Moderne og responsive nettsider tilpasset dine behov.",
-    lucideIcon: PanelTop
+      "Integrerte systemer og fleksible dashboards som gir sanntidsinnsikt og strømlinjeformer arbeidsflyt.",
+    lucideIcon: MonitorCog
     },
 
 ];
