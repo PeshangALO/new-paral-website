@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <main>
       <Lines/>
-      <Hero />
+      {/* <Hero /> */}
       {/*       <CTA /> */}
       {/*       <FAQ /> */}
 {/*       <Brands2/> */}
