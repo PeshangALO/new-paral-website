@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import AnimatedBox from "@/components/AnimatedBox/AnimatedBox"
 import NeoButton from "../NeoButton";
+import { trackLinkedInConversion } from "@/components/LinkedIn/LinkedInConversionTracker";
 
 import { getAssetPath } from "@/utils/assets";
 
@@ -30,7 +31,10 @@ const Hero = () => {
               <div className="flex mr-11 justify-end">
                 <NeoButton
                   text="Book et møte"
-                  onClick={() => router.push('/book-mote')}
+                  onClick={() => {
+                    trackLinkedInConversion('BOOK_MEETING_CLICK');
+                    router.push('/book-mote');
+                  }}
                   withIcon={true}
                 />
               </div>

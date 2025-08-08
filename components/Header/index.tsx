@@ -9,6 +9,7 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { getAssetPath } from "@/utils/assets";
 import NeoButton from "../NeoButton";
+import { trackLinkedInConversion } from "@/components/LinkedIn/LinkedInConversionTracker";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -152,7 +153,10 @@ const Header = () => {
             <ThemeToggler />
             <NeoButton
               text="Book et møte"
-              onClick={() => window.location.href = '/book-mote'}
+              onClick={() => {
+                trackLinkedInConversion('BOOK_MEETING_CLICK');
+                window.location.href = '/book-mote';
+              }}
               withIcon={true}
               size="sm"
             />

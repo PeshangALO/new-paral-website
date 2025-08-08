@@ -10,6 +10,7 @@ import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 import ToasterContext from "../context/ToastContext";
+import { LinkedInPageviewTracker } from "@/components/LinkedIn/LinkedInConversionTracker";
 
 export default function RootLayout({
   children,
@@ -24,6 +25,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="light"
         >
+          <LinkedInPageviewTracker />
           <Header />
           <ToasterContext />
           {children}
