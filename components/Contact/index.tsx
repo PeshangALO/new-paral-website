@@ -41,11 +41,22 @@ const Contact = () => {
     }));
   };
 
+  async function submitContact(formData: unknown) {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+    const payload = await res.json().catch(() => ({ error: 'Invalid JSON' }));
+    if (!res.ok) throw new Error(payload.error || 'Failed to send');
+    return payload;
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setFormStatus({ message: "", isError: false });
-  
+
     const mappedData = {
       firmname: formData.company,
       customer_email: formData.email,
@@ -53,31 +64,18 @@ const Contact = () => {
       message: formData.message,
       tlf: formData.phone,
     };
-  
+
     try {
-      const response = await fetch('https://email-provider.paral.no/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(mappedData),
-      });
-  
-      const responseData = await response.json();
-  
-      if (response.ok) {
-        setFormStatus({ message: "Email sent successfully!", isError: false });
-      } else {
-        setFormStatus({ message: responseData.error || "Failed to send email", isError: true });
-      }
-    } catch (error) {
-      setFormStatus({ message: "Failed to send email", isError: true });
+      const responseData = await submitContact(mappedData);
+      setFormStatus({ message: "Email sent successfully!", isError: false });
+    } catch (error: any) {
+      setFormStatus({ message: error?.message || "Failed to send email", isError: true });
     } finally {
       setIsSubmitting(false);
     }
   };
-  
-  
+
+
 
   return (
     <>
@@ -122,12 +120,11 @@ const Contact = () => {
               </h2>
 
               {formStatus.message && (
-                <div 
-                  className={`mb-4 p-4 rounded ${
-                    formStatus.isError 
-                      ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-100' 
+                <div
+                  className={`mb-4 p-4 rounded ${formStatus.isError
+                      ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-100'
                       : 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-100'
-                  }`}
+                    }`}
                 >
                   {formStatus.message}
                 </div>
@@ -214,7 +211,7 @@ const Contact = () => {
                 </div>
               </form>
             </motion.div>
-            
+
             <motion.div
               variants={{
                 hidden: {
@@ -249,23 +246,23 @@ const Contact = () => {
                 </p>
               </div>
 
-              {ifKontaktOssPage ?  (
-              <div className="mt-10 mb-7">
-                <h3 className="mb-4">Finn oss på kartet</h3>
-                <div className="w-full h-48 md:h-64 lg:h-80 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
+              {ifKontaktOssPage ? (
+                <div className="mt-10 mb-7">
+                  <h3 className="mb-4">Finn oss på kartet</h3>
+                  <div className="w-full h-48 md:h-64 lg:h-80 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
 
-                  <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400">
-                  <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2093.7872365033765!2d8.002230!3d58.172200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463816cc87d5983b%3A0xf7da11b3d98a799!2sGimlemoen%2015%2C%204630%20Kristiansand!5e0!3m2!1sen!2sno!4v1665584783230!5m2!1sen!2sno&zoom=20"
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        loading="lazy"
-        title="Our location"
-      ></iframe>
+                    <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2093.7872365033765!2d8.002230!3d58.172200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463816cc87d5983b%3A0xf7da11b3d98a799!2sGimlemoen%2015%2C%204630%20Kristiansand!5e0!3m2!1sen!2sno!4v1665584783230!5m2!1sen!2sno&zoom=20"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        loading="lazy"
+                        title="Our location"
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
-              </div>
               ) : null}
 
             </motion.div>
