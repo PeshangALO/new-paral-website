@@ -46,7 +46,7 @@ export default function Head() {
       </noscript>
       <link
         rel="icon"
-        href={getAssetPath("/images/favicon.ico")}
+        href={getAssetPath("/favicon.ico")}
         type="image/x-icon"
       />
     </head>

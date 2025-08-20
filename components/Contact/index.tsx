@@ -47,7 +47,10 @@ const Contact = () => {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(formData),
     });
-    const payload = await res.json().catch(() => ({ error: 'Invalid JSON' }));
+    const ct = res.headers.get('content-type') || '';
+    const payload = ct.includes('application/json')
+      ? await res.json().catch(() => ({ error: 'Invalid JSON from server' }))
+      : { error: await res.text().catch(() => 'Invalid response from server') };
     if (!res.ok) throw new Error(payload.error || 'Failed to send');
     return payload;
   }
@@ -122,8 +125,8 @@ const Contact = () => {
               {formStatus.message && (
                 <div
                   className={`mb-4 p-4 rounded ${formStatus.isError
-                      ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-100'
-                      : 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-100'
+                    ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-100'
+                    : 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-100'
                     }`}
                 >
                   {formStatus.message}
