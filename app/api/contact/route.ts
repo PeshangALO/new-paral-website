@@ -1,6 +1,6 @@
 // app/api/contact/route.ts
 import { NextResponse } from 'next/server';
-
+ 
 export async function POST(req: Request) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 10_000);
