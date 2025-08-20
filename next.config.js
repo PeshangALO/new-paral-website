@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  assetPrefix: 'https://paral.no', // Custom domain for assets
-  basePath: '/new-paral-website', // Adjust based on your GitHub Pages path
+  // assetPrefix: 'https://paral.no', // Custom domain for assets
+  // basePath: '/new-paral-website', // Adjust based on your GitHub Pages path
   images: {
     unoptimized: true,
     loader: 'custom',
