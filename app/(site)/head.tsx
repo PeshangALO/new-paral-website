@@ -1,43 +1,56 @@
-// app/api/contact/route.ts
-import { NextResponse } from 'next/server';
+import { getAssetPath } from "@/utils/assets";
 
-export async function POST(req: Request) {
-  try {
-    const formData = await req.json();
-
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000);
-
-    const res = await fetch('https://email-provider.paral.no/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-      signal: controller.signal,
-      cache: 'no-store',
-    });
-
-    clearTimeout(timeout);
-
-    const ct = res.headers.get('content-type') || '';
-    const payload = ct.includes('application/json')
-      ? await res.json()
-      : { message: await res.text() };
-
-    if (!res.ok) {
-      return NextResponse.json(
-        { error: payload.error || payload.message || 'Failed to send email' },
-        { status: res.status }
-      );
-    }
-
-    return NextResponse.json(payload, { status: 200 });
-  } catch (err: any) {
-    if (err?.name === 'AbortError') {
-      return NextResponse.json({ error: 'Upstream timeout' }, { status: 504 });
-    }
-    console.error('Error in contact API route:', err);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
-  }
+export default function Head() {
+  return (
+    <head>
+      <title> Paral Dynamic | Spesialister på digitalisering, AI og andre digitale tjenester!</title>
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <meta name="description " content="Paral Dynamic utvikler løsninger spesialtilpasset din virksomhet, for å optimalisere arbeidsprosesser, øke effektiviteten og nå dine mål. Vi er her for å bygge programvaren som gjør en forskjell for deg!" />
+      {/* Google Tag Manager */}
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-P6993HGX');
+        `
+      }} />
+      {/* End Google Tag Manager */}
+      {/* LinkedIn Insight Tag */}
+      <script type="text/javascript" dangerouslySetInnerHTML={{
+        __html: `
+          _linkedin_partner_id = "8490433";
+          window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+          window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        `
+      }}></script>
+      <script type="text/javascript" dangerouslySetInnerHTML={{
+        __html: `
+          (function(){
+            if(!window.lintrk){
+              window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+            }
+            window.lintrk.q = window.lintrk.q || [];
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+          })();
+        `
+      }}></script>
+      <noscript>
+        <img height="1" width="1" style={{ display: 'none' }} alt="" src="https://px.ads.linkedin.com/collect/?pid=8490433&fmt=gif" />
+      </noscript>
+      <link
+        rel="icon"
+        href={getAssetPath("/images/favicon.ico")}
+        type="image/x-icon"
+      />
+    </head>
+  );
 }
+
+
